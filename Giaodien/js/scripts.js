@@ -161,4 +161,9 @@
         listInfos.splice(index, 1);
         refreshListInfo();
     };
+
+    $('.request-item').click(function (e) {
+        var item = $(this).prop('name');
+        console.log(item);
+    });
 })(jQuery);

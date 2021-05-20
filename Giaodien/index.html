@@ -9,10 +9,12 @@
     <meta name="author" content="" />
     <title>Dashboard - SB Admin</title>
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/simplePagination.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
         crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
         crossorigin="anonymous"></script>
+
 </head>
 
 <body class="sb-nav-fixed container-fluid">
@@ -137,306 +139,728 @@
         </div>
 
         <div id="layoutSidenav_content">
-            <div class="container-fluid">
-                <div class=" row">
-                    <div class="col-md-12">
-                        <div class="">
-                            <div class="card-body">
-                                <a href="./index.html" style="text-decoration: none;">
-                                    <span class="font-title text-muted">Danh sách đề xuất</span>
-                                </a>
+            <div class="container-fluid ">
+                <div id="carouselExampleControls" class="carousel" data-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="">
+                                <div class="">
+                                    <div class="card-body">
+                                        <a href="./index.html" style="text-decoration: none;">
+                                            <span class="font-title text-muted">Danh sách đề xuất</span>
+                                        </a>
 
-                                <ul class="nav mt-4" id="myTab" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" id="all-tab" data-toggle="tab" aria-controls="inbox"
-                                            href="#inbox" role="tab" aria-selected="true">
-                                            <span class="d-block d-md-none"><i class="ti-email"></i></span>
-                                            <span class="d-none d-md-block"> Tất cả</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="comming-tab" data-toggle="tab" aria-controls="sent"
-                                            href="#sent" role="tab" aria-selected="false">
-                                            <span class="d-block d-md-none"><i class="ti-export"></i></span>
-                                            <span class="d-none d-md-block">Đến lượt</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="dealine-tab" data-toggle="tab" aria-controls="spam"
-                                            href="#spam" role="tab" aria-selected="false">
-                                            <span class="d-block d-md-none"><i class="ti-panel"></i></span>
-                                            <span class="d-none d-md-block">Quá hạn</span>
-                                        </a>
-                                    </li>
+                                        <ul class="nav mt-4" id="myTab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="all-tab" data-toggle="tab"
+                                                    aria-controls="inbox" href="#inbox" role="tab" aria-selected="true">
+                                                    <span class="d-block d-md-none"><i class="ti-email"></i></span>
+                                                    <span class="d-none d-md-block"> Tất cả</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="comming-tab" data-toggle="tab"
+                                                    aria-controls="sent" href="#sent" role="tab" aria-selected="false">
+                                                    <span class="d-block d-md-none"><i class="ti-export"></i></span>
+                                                    <span class="d-none d-md-block">Đến lượt</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="dealine-tab" data-toggle="tab"
+                                                    aria-controls="spam" href="#spam" role="tab" aria-selected="false">
+                                                    <span class="d-block d-md-none"><i class="ti-panel"></i></span>
+                                                    <span class="d-none d-md-block">Quá hạn</span>
+                                                </a>
+                                            </li>
 
-                                </ul>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade active show " id="inbox" aria-labelledby="inbox-tab"
+                                            role="tabpanel">
+                                            <!-- Request list-->
+                                            <div class="table-responsive">
+                                                <table
+                                                    class="table email-table no-wrap table-hover v-middle mb-0 font-14">
+                                                    <tbody class="table-request">
+                                                        <tr class="row_request">
+                                                            <td class="pl-3">
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="cst1" />
+                                                                    <label class="custom-control-label"
+                                                                        for="cst1">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <td><i class="fa fa-star text-warning"></i></td>
+                                                            <td>
+                                                                <span class="mb-0 text-muted">Hritik Roshan</span>
+                                                            </td>
+                                                            <td>
+
+                                                                <a class="link request-item"
+                                                                    href="#carouselExampleControls" data-slide="next" name="1">
+                                                                    <span
+                                                                        class="badge badge-pill text-white font-medium badge-danger mr-2">Work</span>
+                                                                    <span class="text-dark">Lorem ipsum
+                                                                        perspiciatis-</span>
+                                                                </a>
+
+                                                            </td>
+                                                            <td><i class="fa fa-paperclip text-muted"></i></td>
+                                                            <td class="text-muted">May 13</td>
+                                                        </tr>
+                                                        <tr class="row_request">
+                                                            <td class="pl-3">
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="cst2" />
+                                                                    <label class="custom-control-label"
+                                                                        for="cst2">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <td><i class="fa fa-star"></i></td>
+                                                            <td>
+                                                                <span class="mb-0 text-muted">Genelia Roshan</span>
+                                                            </td>
+                                                            <td>
+                                                                <a class="link" href="#carouselExampleControls"
+                                                                    data-slide="next">
+                                                                    <span
+                                                                        class="badge badge-pill text-white font-medium badge-info mr-2">Business</span>
+                                                                    <span class="text-dark">Inquiry about license for
+                                                                        Admin </span>
+                                                                </a>
+                                                            </td>
+                                                            <td><i class="fa fa-paperclip text-muted"></i></td>
+                                                            <td class="text-muted">May 13</td>
+                                                        </tr>
+                                                        <!-- row -->
+                                                        <tr class="row-request">
+                                                            <!-- label -->
+                                                            <td class="pl-3">
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="cst3" />
+                                                                    <label class="custom-control-label"
+                                                                        for="cst3">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <!-- star -->
+                                                            <td><i class="fa fa-star text-warning"></i></td>
+                                                            <!-- User -->
+                                                            <td class="user-name max-texts">
+                                                                <span class="mb-0 text-muted font-light">Ritesh
+                                                                    Deshmukh</span>
+                                                            </td>
+                                                            <!-- Message -->
+                                                            <td>
+                                                                <a class="link request-item" href="#carouselExampleControls">
+                                                                    <span
+                                                                        class="badge badge-pill text-white font-medium badge-warning mr-2">Friend</span>
+                                                                    <span class="font-light text-dark">Bitbucket (commit
+                                                                        Pushed) by Ritesh</span>
+                                                                </a>
+                                                            </td>
+                                                            <!-- Attachment -->
+                                                            <td><i class="fa fa-paperclip text-muted"></i></td>
+                                                            <!-- Time -->
+                                                            <td class="text-muted font-light">May 13</td>
+                                                        </tr>
+                                                        <!-- row -->
+                                                        <tr class="row-request">
+                                                            <!-- label -->
+                                                            <td class="pl-3">
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="cst4" />
+                                                                    <label class="custom-control-label"
+                                                                        for="cst4">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <!-- star -->
+                                                            <td><i class="fa fa-star"></i></td>
+                                                            <!-- User -->
+                                                            <td>
+                                                                <span class="mb-0 text-muted font-light">Akshay
+                                                                    Kumar</span>
+                                                            </td>
+                                                            <!-- Message -->
+                                                            <td>
+                                                                <a class="link" href="#carouselExampleControls">
+                                                                    <span
+                                                                        class="badge badge-pill text-white font-medium badge-info mr-2">Work</span><span
+                                                                        class="font-light text-dark">Perspiciatis unde
+                                                                        omnis- iste Lorem ipsum</span>
+                                                                </a>
+                                                            </td>
+                                                            <!-- Attachment -->
+                                                            <td><i class="fa fa-paperclip text-muted"></i></td>
+                                                            <!-- Time -->
+                                                            <td class="text-muted font-light">May 9</td>
+                                                        </tr>
+                                                        <!-- row -->
+                                                        <tr class="row-request">
+                                                            <!-- label -->
+                                                            <td class="pl-3">
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="cst5" />
+                                                                    <label class="custom-control-label"
+                                                                        for="cst5">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <!-- star -->
+                                                            <td><i class="fa fa-star"></i></td>
+                                                            <!-- User -->
+                                                            <td>
+                                                                <span class="mb-0 text-muted font-light">John
+                                                                    Abraham</span>
+                                                            </td>
+                                                            <!-- Message -->
+                                                            <td>
+                                                                <a class="link" href="javascript: void(0)">
+                                                                    <span
+                                                                        class="badge badge-pill text-white font-medium badge-success mr-2">Work</span>
+                                                                    <span class="font-light text-dark">Lorem ipsum
+                                                                        perspiciatis- unde omnis</span>
+                                                                </a>
+                                                            </td>
+                                                            <!-- Attachment -->
+                                                            <td><i class="fa fa-paperclip text-muted"></i></td>
+                                                            <!-- Time -->
+                                                            <td class="text-muted font-light">Mar 10</td>
+                                                        </tr>
+                                                        <!-- row -->
+                                                        <tr class="row-request">
+                                                            <!-- label -->
+                                                            <td class="pl-3">
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="cst6" />
+                                                                    <label class="custom-control-label"
+                                                                        for="cst6">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <!-- star -->
+                                                            <td><i class="fa fa-star text-warning"></i></td>
+                                                            <!-- User -->
+                                                            <td>
+                                                                <span class="mb-0 text-muted font-light">Akshay
+                                                                    Kumar</span>
+                                                            </td>
+                                                            <!-- Message -->
+                                                            <td>
+                                                                <a class="link" href="javascript: void(0)">
+                                                                    <span
+                                                                        class="badge badge-pill text-white font-medium badge-success mr-2">Work</span>
+                                                                    <span class="font-light text-dark">Lorem ipsum
+                                                                        perspiciatis - unde</span>
+                                                                </a>
+                                                            </td>
+                                                            <!-- Attachment -->
+                                                            <td><i class="fa fa-paperclip text-muted"></i></td>
+                                                            <!-- Time -->
+                                                            <td class="text-muted font-light">Mar 09</td>
+                                                        </tr>
+                                                        <!-- row -->
+                                                        <tr class="row-request">
+                                                            <!-- label -->
+                                                            <td class="pl-3">
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input"
+                                                                        id="cst7" />
+                                                                    <label class="custom-control-label"
+                                                                        for="cst7">&nbsp;</label>
+                                                                </div>
+                                                            </td>
+                                                            <!-- star -->
+                                                            <td><i class="fa fa-star text-warning"></i></td>
+                                                            <!-- User -->
+                                                            <td>
+                                                                <span class="mb-0 text-muted font-light">Hanna
+                                                                    Gover</span>
+                                                            </td>
+                                                            <!-- Message -->
+                                                            <td>
+                                                                <a class="link" href="javascript: void(0)">
+                                                                    <span
+                                                                        class="badge badge-pill text-white font-medium badge-danger mr-2">Work</span><span
+                                                                        class="font-light text-dark"> Unde omnis Lorem
+                                                                        ipsum perspiciatis</span>
+                                                                </a>
+                                                            </td>
+                                                            <!-- Attachment -->
+                                                            <td><i class="fa fa-paperclip text-muted"></i></td>
+                                                            <!-- Time -->
+                                                            <td class="text-muted font-light">Mar 09</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="form-inline">
+                                                <div id="pagination-container"></div>
+                                                <i class="fas fa-redo-alt"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-pane fade" id="sent" aria-labelledby="sent-tab" role="tabpanel">
+                                            <div class="row p-3 text-dark">
+                                                <div class="col-md-6">
+                                                    <h3 class="font-light">Lets check profile</h3>
+                                                    <h4 class="font-light">you can use it with the small code</h4>
+                                                </div>
+                                                <div class="col-md-6 text-right">
+                                                    <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+                                                        arcu.
+                                                        In enim justo, rhoncus ut, imperdiet a.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="spam" aria-labelledby="spam-tab" role="tabpanel">
+                                            <div class="row p-3 text-dark">
+                                                <div class="col-md-6">
+                                                    <h3 class="font-light">Come on you have a lot message</h3>
+                                                    <h4 class="font-light">you can use it with the small code</h4>
+                                                </div>
+                                                <div class="col-md-6 text-right">
+                                                    <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+                                                        arcu.
+                                                        In enim justo, rhoncus ut, imperdiet a.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="delete" aria-labelledby="delete-tab"
+                                            role="tabpanel">
+                                            <div class="row p-3 text-dark">
+                                                <div class="col-md-6">
+                                                    <h3 class="font-light">Just do Settings</h3>
+                                                    <h4 class="font-light">you can use it with the small code</h4>
+                                                </div>
+                                                <div class="col-md-6 text-right">
+                                                    <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+                                                        arcu.
+                                                        In enim justo, rhoncus ut, imperdiet a.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
                             </div>
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade active show " id="inbox" aria-labelledby="inbox-tab"
-                                    role="tabpanel">
-                                    <!-- Request list-->
-                                    <div class="table-responsive">
-                                        <table class="table email-table no-wrap table-hover v-middle mb-0 font-14">
-                                            <tbody>
-                                                <tr class="row_request">
-                                                    <td class="pl-3">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                id="cst1" />
-                                                            <label class="custom-control-label"
-                                                                for="cst1">&nbsp;</label>
-                                                        </div>
-                                                    </td>
-                                                    <td><i class="fa fa-star text-warning"></i></td>
-                                                    <td>
-                                                        <span class="mb-0 text-muted">Hritik Roshan</span>
-                                                    </td>
-                                                    <td>
 
-                                                        <a class="link request-item" href="./form.html">
-                                                            <span
-                                                                class="badge badge-pill text-white font-medium badge-danger mr-2">Work</span>
-                                                            <span class="text-dark">Lorem ipsum
-                                                                perspiciatis-</span>
-                                                        </a>
-                                                    </td>
-                                                    <td><i class="fa fa-paperclip text-muted"></i></td>
-                                                    <td class="text-muted">May 13</td>
-                                                </tr>
-                                                <tr class="row_request">
-                                                    <td class="pl-3">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                id="cst2" />
-                                                            <label class="custom-control-label"
-                                                                for="cst2">&nbsp;</label>
-                                                        </div>
-                                                    </td>
-                                                    <td><i class="fa fa-star"></i></td>
-                                                    <td>
-                                                        <span class="mb-0 text-muted">Genelia Roshan</span>
-                                                    </td>
-                                                    <td>
-                                                        <a class="link" href="./form.html">
-                                                            <span
-                                                                class="badge badge-pill text-white font-medium badge-info mr-2">Business</span>
-                                                            <span class="text-dark">Inquiry about license for
-                                                                Admin </span>
-                                                        </a>
-                                                    </td>
-                                                    <td><i class="fa fa-paperclip text-muted"></i></td>
-                                                    <td class="text-muted">May 13</td>
-                                                </tr>
-                                                <!-- row -->
-                                                <tr>
-                                                    <!-- label -->
-                                                    <td class="pl-3">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                id="cst3" />
-                                                            <label class="custom-control-label"
-                                                                for="cst3">&nbsp;</label>
-                                                        </div>
-                                                    </td>
-                                                    <!-- star -->
-                                                    <td><i class="fa fa-star text-warning"></i></td>
-                                                    <!-- User -->
-                                                    <td class="user-name max-texts">
-                                                        <span class="mb-0 text-muted font-light">Ritesh
-                                                            Deshmukh</span>
-                                                    </td>
-                                                    <!-- Message -->
-                                                    <td>
-                                                        <a class="link request-item" href="javascript: void(0)">
-                                                            <span
-                                                                class="badge badge-pill text-white font-medium badge-warning mr-2">Friend</span>
-                                                            <span class="font-light text-dark">Bitbucket (commit
-                                                                Pushed) by Ritesh</span>
-                                                        </a>
-                                                    </td>
-                                                    <!-- Attachment -->
-                                                    <td><i class="fa fa-paperclip text-muted"></i></td>
-                                                    <!-- Time -->
-                                                    <td class="text-muted font-light">May 13</td>
-                                                </tr>
-                                                <!-- row -->
-                                                <tr class="">
-                                                    <!-- label -->
-                                                    <td class="pl-3">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                id="cst4" />
-                                                            <label class="custom-control-label"
-                                                                for="cst4">&nbsp;</label>
-                                                        </div>
-                                                    </td>
-                                                    <!-- star -->
-                                                    <td><i class="fa fa-star"></i></td>
-                                                    <!-- User -->
-                                                    <td>
-                                                        <span class="mb-0 text-muted font-light">Akshay
-                                                            Kumar</span>
-                                                    </td>
-                                                    <!-- Message -->
-                                                    <td>
-                                                        <a class="link" href="javascript: void(0)">
-                                                            <span
-                                                                class="badge badge-pill text-white font-medium badge-info mr-2">Work</span><span
-                                                                class="font-light text-dark">Perspiciatis unde
-                                                                omnis- iste Lorem ipsum</span>
-                                                        </a>
-                                                    </td>
-                                                    <!-- Attachment -->
-                                                    <td><i class="fa fa-paperclip text-muted"></i></td>
-                                                    <!-- Time -->
-                                                    <td class="text-muted font-light">May 9</td>
-                                                </tr>
-                                                <!-- row -->
-                                                <tr class="">
-                                                    <!-- label -->
-                                                    <td class="pl-3">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                id="cst5" />
-                                                            <label class="custom-control-label"
-                                                                for="cst5">&nbsp;</label>
-                                                        </div>
-                                                    </td>
-                                                    <!-- star -->
-                                                    <td><i class="fa fa-star"></i></td>
-                                                    <!-- User -->
-                                                    <td>
-                                                        <span class="mb-0 text-muted font-light">John
-                                                            Abraham</span>
-                                                    </td>
-                                                    <!-- Message -->
-                                                    <td>
-                                                        <a class="link" href="javascript: void(0)">
-                                                            <span
-                                                                class="badge badge-pill text-white font-medium badge-success mr-2">Work</span>
-                                                            <span class="font-light text-dark">Lorem ipsum
-                                                                perspiciatis- unde omnis</span>
-                                                        </a>
-                                                    </td>
-                                                    <!-- Attachment -->
-                                                    <td><i class="fa fa-paperclip text-muted"></i></td>
-                                                    <!-- Time -->
-                                                    <td class="text-muted font-light">Mar 10</td>
-                                                </tr>
-                                                <!-- row -->
-                                                <tr class="">
-                                                    <!-- label -->
-                                                    <td class="pl-3">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                id="cst6" />
-                                                            <label class="custom-control-label"
-                                                                for="cst6">&nbsp;</label>
-                                                        </div>
-                                                    </td>
-                                                    <!-- star -->
-                                                    <td><i class="fa fa-star text-warning"></i></td>
-                                                    <!-- User -->
-                                                    <td>
-                                                        <span class="mb-0 text-muted font-light">Akshay
-                                                            Kumar</span>
-                                                    </td>
-                                                    <!-- Message -->
-                                                    <td>
-                                                        <a class="link" href="javascript: void(0)">
-                                                            <span
-                                                                class="badge badge-pill text-white font-medium badge-success mr-2">Work</span>
-                                                            <span class="font-light text-dark">Lorem ipsum
-                                                                perspiciatis - unde</span>
-                                                        </a>
-                                                    </td>
-                                                    <!-- Attachment -->
-                                                    <td><i class="fa fa-paperclip text-muted"></i></td>
-                                                    <!-- Time -->
-                                                    <td class="text-muted font-light">Mar 09</td>
-                                                </tr>
-                                                <!-- row -->
-                                                <tr class="">
-                                                    <!-- label -->
-                                                    <td class="pl-3">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input"
-                                                                id="cst7" />
-                                                            <label class="custom-control-label"
-                                                                for="cst7">&nbsp;</label>
-                                                        </div>
-                                                    </td>
-                                                    <!-- star -->
-                                                    <td><i class="fa fa-star text-warning"></i></td>
-                                                    <!-- User -->
-                                                    <td>
-                                                        <span class="mb-0 text-muted font-light">Hanna
-                                                            Gover</span>
-                                                    </td>
-                                                    <!-- Message -->
-                                                    <td>
-                                                        <a class="link" href="javascript: void(0)">
-                                                            <span
-                                                                class="badge badge-pill text-white font-medium badge-danger mr-2">Work</span><span
-                                                                class="font-light text-dark"> Unde omnis Lorem
-                                                                ipsum perspiciatis</span>
-                                                        </a>
-                                                    </td>
-                                                    <!-- Attachment -->
-                                                    <td><i class="fa fa-paperclip text-muted"></i></td>
-                                                    <!-- Time -->
-                                                    <td class="text-muted font-light">Mar 09</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="sent" aria-labelledby="sent-tab" role="tabpanel">
-                                    <div class="row p-3 text-dark">
-                                        <div class="col-md-6">
-                                            <h3 class="font-light">Lets check profile</h3>
-                                            <h4 class="font-light">you can use it with the small code</h4>
-                                        </div>
-                                        <div class="col-md-6 text-right">
-                                            <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                                                In enim justo, rhoncus ut, imperdiet a.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="spam" aria-labelledby="spam-tab" role="tabpanel">
-                                    <div class="row p-3 text-dark">
-                                        <div class="col-md-6">
-                                            <h3 class="font-light">Come on you have a lot message</h3>
-                                            <h4 class="font-light">you can use it with the small code</h4>
-                                        </div>
-                                        <div class="col-md-6 text-right">
-                                            <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                                                In enim justo, rhoncus ut, imperdiet a.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="delete" aria-labelledby="delete-tab" role="tabpanel">
-                                    <div class="row p-3 text-dark">
-                                        <div class="col-md-6">
-                                            <h3 class="font-light">Just do Settings</h3>
-                                            <h4 class="font-light">you can use it with the small code</h4>
-                                        </div>
-                                        <div class="col-md-6 text-right">
-                                            <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                                                In enim justo, rhoncus ut, imperdiet a.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
+                        <div class="carousel-item">
+                            <div class=" row">
+                                <div class="col-md-2 border-right">
+                                    <div class="">
+                                        <div class="card-body">
+                                            <a href="#carouselExampleControls" style="text-decoration: none;"
+                                                data-slide="prev">
+                                                <i class="fas fa-angle-left font-title text-muted"></i>
+                                                <span class="font-title text-muted">Danh sách đề xuất</span>
+                                            </a>
 
+                                            <ul class="nav mt-4" id="myTab" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" id="all-tab-list" data-toggle="tab"
+                                                        aria-controls="inbox-list" href="#inbox-list" role="tab"
+                                                        aria-selected="true">
+                                                        <span class="d-block d-md-none"><i class="ti-email"></i></span>
+                                                        <span class="d-none d-md-block"> Tất cả</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="comming-tab-list" data-toggle="tab"
+                                                        aria-controls="sent" href="#sent-list" role="tab"
+                                                        aria-selected="false">
+                                                        <span class="d-block d-md-none"><i class="ti-export"></i></span>
+                                                        <span class="d-none d-md-block">Đến lượt</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="dealine-tab-list" data-toggle="tab"
+                                                        aria-controls="spam" href="#spam-list" role="tab"
+                                                        aria-selected="false">
+                                                        <span class="d-block d-md-none"><i class="ti-panel"></i></span>
+                                                        <span class="d-none d-md-block">Quá hạn</span>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade active show " id="inbox-list"
+                                                aria-labelledby="all-tab-list" role="tabpanel">
+                                                <div>
+                                                    <div class="list-group list-group-flush list-request">
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action flex-column align-items-start list-request-item">
+                                                            <div class="d-flex w-100 justify-content-between">
+                                                                <h5 class="mb-1">List group item heading</h5>
+                                                                <small>3 days ago</small>
+                                                            </div>
+                                                            <p class="mb-1">Donec id elit non mi porta gravida at eget
+                                                                metus.
+                                                                Maecenas sed diam eget risus varius blandit.</p>
+                                                            <small>Donec id elit non mi porta.</small>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action flex-column align-items-start list-request-item">
+                                                            <div class="d-flex w-100 justify-content-between">
+                                                                <h5 class="mb-1">List group item heading</h5>
+                                                                <small>3 days ago</small>
+                                                            </div>
+                                                            <p class="mb-1">Donec id elit non mi porta gravida at eget
+                                                                metus.
+                                                                Maecenas sed diam eget risus varius blandit.</p>
+                                                            <small>Donec id elit non mi porta.</small>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action flex-column align-items-start list-request-item">
+                                                            <div class="d-flex w-100 justify-content-between">
+                                                                <h5 class="mb-1">List group item heading</h5>
+                                                                <small>3 days ago</small>
+                                                            </div>
+                                                            <p class="mb-1">Donec id elit non mi porta gravida at eget
+                                                                metus.
+                                                                Maecenas sed diam eget risus varius blandit.</p>
+                                                            <small>Donec id elit non mi porta.</small>
+                                                        </a>
+
+                                                    </div>
+                                                    <div class="form-inline mt-4">
+                                                        <div id="pagination-container-list"></div>
+                                                        <i class="fas fa-redo-alt"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="sent-list" aria-labelledby="comming-tab-list"
+                                                role="tabpanel">
+                                                <div class="row p-3 text-dark">
+                                                    <div class="col-md-6">
+                                                        <h3 class="font-light">Lets check profile</h3>
+                                                        <h4 class="font-light">you can use it with the small code</h4>
+                                                    </div>
+                                                    <div class="col-md-6 text-right">
+                                                        <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+                                                            arcu.
+                                                            In enim justo, rhoncus ut, imperdiet a.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="spam-list" aria-labelledby="dealine-tab-list"
+                                                role="tabpanel">
+                                                <div class="row p-3 text-dark">
+                                                    <div class="col-md-6">
+                                                        <h3 class="font-light">Come on you have a lot message</h3>
+                                                        <h4 class="font-light">you can use it with the small code</h4>
+                                                    </div>
+                                                    <div class="col-md-6 text-right">
+                                                        <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+                                                            arcu.
+                                                            In enim justo, rhoncus ut, imperdiet a.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="delete" aria-labelledby="delete-tab"
+                                                role="tabpanel">
+                                                <div class="row p-3 text-dark">
+                                                    <div class="col-md-6">
+                                                        <h3 class="font-light">Just do Settings</h3>
+                                                        <h4 class="font-light">you can use it with the small code</h4>
+                                                    </div>
+                                                    <div class="col-md-6 text-right">
+                                                        <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+                                                            arcu.
+                                                            In enim justo, rhoncus ut, imperdiet a.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-md-8 border-right">
+                                    <br>
+                                    <h4 class="font-weight-bold">SUPPLY REQUEST(YÊU CẦU CUNG CẤP)</h4>
+                                    <p class="font-italic text-muted">Trạng thái:<span class="text-primary ml-2">Đang
+                                            chờ
+                                            duyệt</span></p>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button class="btn btn-success col">Chấp thuận</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-primary col">Chuyển tiếp</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-danger col">Từ chối</button>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-10">
+                                            <p class=" font-weight-bold">THÔNG TIN ĐỀ XUẤT</p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="text-right">MÃ ĐỀ XUẤT: <span
+                                                    class="text-primary font-weight-bold">12345</span></p>
+                                        </div>
+                                    </div>
+                                    <hr class="mt-1">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="fas fa-user-edit text-muted"></i>
+                                            <span class="text-muted">Người tạo</span>
+                                        </div>
+                                        <div class="col-3">
+                                            <p>Hà Thị Hoàn</p>
+                                        </div>
+                                        <div class="col-3">
+                                            <p class="text-muted">Staffcode <span class="text-dark">34811</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="fas fa-clock text-muted"></i>
+                                            <span class="text-muted">Thời gian tạo</span>
+                                        </div>
+                                        <div class="col-3">
+                                            <p>18/05/2021 12:00</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="far fa-calendar-alt text-muted"></i>
+                                            <span class="text-muted">Issue date(Ngày phát hành)</span>
+                                        </div>
+                                        <div class="col-3">
+                                            <p>18/05/2021</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="fas fa-building text-muted"></i>
+                                            <span class="text-muted">Dept(Bộ phận)</span>
+                                        </div>
+                                        <div class="col-3">
+                                            <p>IT</p>
+                                        </div>
+                                    </div>
+                                    <table class="table table-bordered ">
+                                        <thead>
+                                            <th>No</th>
+                                            <th>Code No</th>
+                                            <th>Item name</th>
+                                            <th>Description</th>
+                                            <th>Vendor</th>
+                                            <th>Unit_Price</th>
+                                            <th>Qty</th>
+                                            <th>Unit<span class="font-italic">(kg*pcs)</span></th>
+                                            <th>Amount<span class="font-italic">(USD or VND)</span></th>
+                                            <th>Owner of Item</th>
+                                            <th>Cost Center</th>
+                                            <th>Account code</th>
+                                            <th>Asset No.</th>
+                                        </thead>
+                                        <thead>
+                                            <th class="font-weight-normal">STT</th>
+                                            <th class="font-weight-normal">Mã số</th>
+                                            <th class="font-weight-normal">Tiền hàng</th>
+                                            <th class="font-weight-normal">Quy cách</th>
+                                            <th class="font-weight-normal">Nhà cung cấp</th>
+                                            <th class="font-weight-normal">Đơn giá</th>
+                                            <th class="font-weight-normal">Số lượng</th>
+                                            <th class="font-weight-normal">Đơn vị</th>
+                                            <th class="font-weight-normal">Số tiền</th>
+                                            <th class="font-weight-normal">U→UMC
+                                                C→Customer</th>
+                                            <th class="font-weight-normal">AI/SMT/FAT/
+                                                Other/Office</th>
+                                            <th class="font-weight-normal">Tài khoản</th>
+                                            <th class="font-weight-normal">Số tài khoản</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="6"></td>
+                                                <td colspan="2">TOTAL <span class="font-italic">(Tổng số)</span></td>
+                                                <td class="font-weight-bold">0</td>
+                                                <td colspan="2" class="font-weight-bold">（USD or VND）</td>
+                                                <td></td>
+                                                <td></td>
+
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                    <p>**Thông tin thêm**</p>
+                                    <p>- Request Delivery Date <span class="font-italic">(Ngày yêu cầu giao
+                                            hàng):</span>05/18/2021
+                                    </p>
+                                    <p>- Remark<span class="font-italic">(Ghi chú): </p>
+                                    <div class="form-inline">
+                                        <p>- Round robin</p>
+                                        <div class="form-check m-3">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                YES
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2" checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                NO
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p>- Request expenses to Customer ? YES / NO) 　　客先費用請求あり？　なし？</p>
+                                        <p class="ml-2">Có yêu cầu khách hàng thanh toán : Có / Không </p>
+                                    </div>
+                                    <div>
+                                        <p>→if YES , How to request?　どのような方法で請求を行いますか(売上単価上乗せ、ＤＮ請求　等）</p>
+                                        <p>Nếu có thì yêu cầu như thế nào ( cho vào đơn giá bán hàng , hay yêu cầu DN …)
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <h5 class="mt-4 text-success">HOẠT ĐỘNG CHÍNH</h5>
+                                    <hr>
+                                    <ul class="timeline">
+                                        <li>
+                                            <a target="_blank" href="https://www.totoprayogo.com/#">New Web Design</a>
+                                            <a href="#" class="float-right">21 March, 2014</a>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                                                scelerisque diam non
+                                                nisi semper, et elementum lorem ornare. Maecenas placerat facilisis
+                                                mollis. Duis
+                                                sagittis ligula in sodales vehicula....</p>
+                                        </li>
+                                        <li>
+                                            <a href="#">21 000 Job Seekers</a>
+                                            <a href="#" class="float-right">4 March, 2014</a>
+                                            <p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam
+                                                pellentesque
+                                                felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+                                        </li>
+                                        <li>
+                                            <a href="#">Awesome Employers</a>
+                                            <a href="#" class="float-right">1 April, 2014</a>
+                                            <p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio,
+                                                tincidunt
+                                                vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
 
                     </div>
 
                 </div>
             </div>
-
         </div>
+
+
 
 
 
@@ -624,175 +1048,7 @@
                                     <th></th>
                                 </thead>
                                 <tbody id="tableInfo">
-                                   
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="row form-inline m-5">
-                            <div class="col-1"></div>
-                            <button type="button" class="btn btn-light col mr-3" data-dismiss="modal">Hủy bỏ</button>
-                            <button type="button" class="btn btn-success col ml-3">Gửi đề xuất</button>
-                            <div class="col-1"></div>
-                        </div>
 
-                    </form>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="enterRequestForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-lg modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-light">
-                    <h5 class="modal-title" id="exampleModalLongTitle">TẠO ĐỀ XUẤT MỚI</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="">
-                        <div class="row">
-                            <div class="col-3">
-                                <label class="font-weight-bold">Issus date (Ngày phát hành) *</label>
-                            </div>
-                            <div class="col-9">
-                                <input type="date" class="form-control">
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-3">
-                                <label class="font-weight-bold">Dept (Bộ phận) *</label>
-                            </div>
-                            <div class="col-9">
-                                <select class="form-control" aria-label="Default select example">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-3">
-                                <label class="font-weight-bold">Name (Họ tên) *</label>
-                            </div>
-                            <div class="col-9">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <hr>
-                        <a class="font-weight-bold text-success" data-toggle="collapse" href="#collapseExample"
-                            role="button" aria-expanded="false" aria-controls="collapseExample">
-                            <i class="fas fa-plus"></i>
-                            THÊM THÔNG TIN SẢN PHẨM
-                        </a>
-
-                        <div class="collapse" id="collapseExample">
-                            <div class="card card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <label>No(Mã số)</label>
-                                        <input type="text" class="form-control ml-1" id="txbNo">
-                                    </div>
-                                    <div class="col">
-                                        <label>Item name(Tên hàng):</label>
-                                        <input type="text" class="form-control ml-1" id="txbItemName">
-                                    </div>
-
-                                    <div class="col">
-                                        <label>Vendor(Nhà cung cấp):</label>
-                                        <input type="text" class="form-control ml-1" id="txbVendor">
-                                    </div>
-                                    <div class="col">
-                                        <label>Unit Price(Đơn giá):</label>
-                                        <input type="text" class="form-control ml-1" id="txbPrice">
-                                    </div>
-                                    <div class="col">
-                                        <label>Qty(Số lượng):</label>
-                                        <input type="text" class="form-control ml-1" id="txbQty">
-                                    </div>
-                                    <div class="col">
-                                        <label>Unit(kg・ｐｃｓ）(Đơn vị):</label>
-                                        <input type="text" class="form-control ml-1" id="txbUnit">
-                                    </div>
-                                    <div class="col">
-                                        <label>Amount(Số tiền)(USD or VND):</label>
-                                        <input type="text" class="form-control ml-1" id="txbAmount">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col">
-                                        <label>Description(Quy cách):</label>
-                                        <textarea rows="3" class="form-control" id="txbDesc"></textarea>
-                                    </div>
-                                    <div class="col">
-                                        <label>Owner of Item(U-> UMC)(C-Customer):</label>
-                                        <input type="text" class="form-control ml-1" id="txbOwnerItem">
-                                    </div>
-                                    <div class="col">
-                                        <label>Cost center(AI/SMT/FAT/
-                                            Other/Office):</label>
-                                        <input type="text" class="form-control ml-1" id="txbCostCenter">
-                                    </div>
-                                    <div class="col">
-                                        <label>Account(Tài khoản):</label>
-                                        <input type="text" class="form-control ml-1" id="txbAccount">
-                                    </div>
-                                    <div class="col">
-                                        <label>Asset No. (Số tài sản):</label>
-                                        <input type="text" class="form-control ml-1" id="txbAsset">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <button type="button" class="btn btn-success" id="btnAddInfo">Thêm</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table table-bordered mt-3">
-                                <thead>
-                                    <th>No</th>
-                                    <th>Code No</th>
-                                    <th width="300px">Item name</th>
-                                    <th width="300px">Description</th>
-                                    <th>Vendor</th>
-                                    <th>Unit_Price</th>
-                                    <th>Qty</th>
-                                    <th>Unit<span class="font-italic">(kg*pcs)</span></th>
-                                    <th width="100px">Amount<span class="font-italic">(USD or VND)</span></th>
-                                    <th width="50px">Owner of Item</th>
-                                    <th width="50px">Cost Center</th>
-                                    <th>Account code</th>
-                                    <th>Asset No.</th>
-                                    <th></th>
-                                </thead>
-                                <thead>
-                                    <th class="font-weight-normal">STT</th>
-                                    <th class="font-weight-normal">Mã số</th>
-                                    <th class="font-weight-normal">Tiền hàng</th>
-                                    <th class="font-weight-normal">Quy cách</th>
-                                    <th class="font-weight-normal">Nhà cung cấp</th>
-                                    <th class="font-weight-normal">Đơn giá</th>
-                                    <th class="font-weight-normal">Số lượng</th>
-                                    <th class="font-weight-normal">Đơn vị</th>
-                                    <th class="font-weight-normal">Số tiền</th>
-                                    <th class="font-weight-normal">U→UMC
-                                        C→Customer</th>
-                                    <th class="font-weight-normal">AI/SMT/FAT/
-                                        Other/Office</th>
-                                    <th class="font-weight-normal">Tài khoản</th>
-                                    <th class="font-weight-normal">Số tài khoản</th>
-                                    <th></th>
-                                </thead>
-                                <tbody id="tableInfo">
-                                   
                                 </tbody>
                             </table>
                         </div>
@@ -815,9 +1071,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/jquery.simplePagination.js"></script>
+    <script src="js/pagination.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
     <script src="assets/demo/datatables-demo.js"></script>
+
 </body>
 
 </html>
