@@ -115,7 +115,6 @@
             row.append(ItemName);
             row.append(Desc);
             row.append(Vendor);
-            row.append(Price);
             row.append(Qty);
             row.append(Unit);
             row.append(Amount);
@@ -165,5 +164,131 @@
     $('.request-item').click(function (e) {
         var item = $(this).prop('name');
         console.log(item);
+    });
+    var numberComment = 0;
+    $('#btnAddComment').click(function (e) {
+        if (!$.trim($("#txbComment").val())) {
+            $('#txbComment').focus();
+            return;
+        }
+        var li = $('<li/>', {
+            class: "list-group-item"
+        });
+        var row = $('<div/>', {
+            class: "row"
+        });
+        var col1 = $('<div/>', {
+            class: "col-3"
+        });
+        var img = $('<img/>', {
+            src: "https://cdn.brvn.vn/news/480px/2017/13343_Maruko.jpg",
+            alt: "avatar"
+        });
+        col1.append(img);
+        row.append(col1);
+        var col2 = $('<div/>', {
+            class: "col-8"
+        });
+
+        var name = $('<div/>', {
+            class: "font-weight-bold mt-2",
+            text: "Ha Hoan"
+        });
+        col2.append(name);
+        var date = $('<div/>', {
+            text: moment().calendar()
+        });
+
+        col2.append(date);
+        row.append(col2);
+        li.append(row);
+
+        var msg = $('#txbComment').val();
+        var arrChar = msg.split(' ');
+        msg = "";
+        var content = $('<p/>');
+        var userTag = [];
+        arrChar.forEach(function (item) {
+
+            var startChar = item.substr(0, 1);
+            if (startChar == "@") {
+                var username = item.substr(1) 
+                var user = users.find(x => x.username === username);
+                if (user != null) {
+                    if(!userTag.includes(user.name)){
+                        userTag.push(user.name);
+                    }
+                  
+                    var span = $('<span/>', {
+
+                    });
+                    span.css("background", "#bbdefb")
+                    span.append(item);
+                    content.append(span);
+                    content.append(" ");
+                } else {
+                    content.append(item + " ");
+                }
+
+            } else {
+                content.append(item + " ");
+            }
+
+        })
+
+        li.append(content);
+        var a = $('<a/>', {
+            href: "javascript:void(0)",
+            style: "text-decoration:none",
+            class: "text-secondary",
+
+        });
+        var i = $('<i/>', {
+            class: "fas fa-thumbs-up mr-1"
+        });
+        a.append(i);
+        a.append("Like");
+        li.append(a);
+        $('.list-comment').prepend(li);
+        numberComment++;
+        $('#totalComment').text(numberComment);
+        $('#txbComment').val("");
+        $('#txbComment').focus();
+        console.log(userTag);
+    });
+
+    /* Tag friends */
+    var users = [
+        {
+            name: '34811',
+            username: 'HaHoan'
+        },
+        {
+            name: '34812',
+            username: 'HaHoan2'
+        },
+        {
+            name: '34813',
+            username: 'HaHoan3'
+        },
+        {
+            name: '34814',
+            username: 'HaHoan4'
+        },
+        {
+            name: '34815',
+            username: 'HaHoan5'
+        },
+        {
+            name: '34816',
+            username: 'HaHoan6'
+        },
+        {
+            name: '34817',
+            username: 'HaHoan7'
+        }
+    ];
+    $("#txbComment").mention({
+        users: users
     });
 })(jQuery);
