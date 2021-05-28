@@ -212,13 +212,13 @@
 
             var startChar = item.substr(0, 1);
             if (startChar == "@") {
-                var username = item.substr(1) 
+                var username = item.substr(1)
                 var user = users.find(x => x.username === username);
                 if (user != null) {
-                    if(!userTag.includes(user.name)){
+                    if (!userTag.includes(user.name)) {
                         userTag.push(user.name);
                     }
-                  
+
                     var span = $('<span/>', {
 
                     });
@@ -291,4 +291,6 @@
     $("#txbComment").mention({
         users: users
     });
-})(jQuery);
+
+  
+});
