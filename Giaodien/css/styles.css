@@ -52,7 +52,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  font-size: 13px;
+  font-size: 12px;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -10386,6 +10386,7 @@ body {
     top: 30%;
     transition: all 200ms ease-in;
   }
+ 
 }
 
 
@@ -10449,12 +10450,7 @@ body {
   padding: 2px;
   border-bottom: 2px solid white;
 }
-  img {
-    float: left;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-  }
+ 
 .chat-about {
   float: left;
   padding-left: 10px;
@@ -10463,9 +10459,16 @@ body {
 
 .chat-with {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 12px;
 }
 
+
+.avatar{
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
 .chat-num-messages {
   color: gray;
 }
@@ -10592,3 +10595,52 @@ pre {
   list-style: none;
 }
 /*====*/
+/* Form*/
+.form-input{
+  border: none;
+  font-size: 10px;
+  width: 100%;
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #5cb85c;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+#contextMenu {
+  position: absolute;
+  display: none;
+}
+
+.wrap{
+  width:90%;
+  display:block;
+  margin:0 auto;
+}
+

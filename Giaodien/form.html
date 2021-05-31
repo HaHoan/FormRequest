@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
     <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/pdf.css" rel="stylesheet" />
+    <link href="css/simplePagination.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
         crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
@@ -15,261 +17,333 @@
 
 </head>
 
-<body>
-    <div class="container mt-5">
-        <h2 class="text-center">SUPPLY REQUEST</h2>
-        <h2 class="text-center">YÊU CẦU CUNG CẤP</h2>
-        <div class="row mt-5">
-            <div class="col">
-                <p> ※物品受領後、依頼元は必ずアセットセンタ-スタッフ立会のもと現物確認（検収）と
-                    固定資産シールの貼付を行って下さい
-                    　 すべての物品は一旦ACに預け、必要な分を払出申請書にて払い出すことを原則とします</p>
-                <p>
-                    Sau khi nhận hàng, người đề nghị phải kiểm tra cùng với
-                    Người Quản lý tài sản . Sau đó dán mã tài sản cùng thời gian
-                    Xin chuyển toàn bộ vào kho AC, sau đó làm "Supply Request" và chuyển về bộ phận.
-                </p>
+<body class="sb-nav-fixed container-fluid">
 
-            </div>
-            <div class="col">
-                <div class="row">
-                    <div class="col">ISSUS DATE <span class="font-italic">(Ngày phát hành)</span></div>
-                    <div class="col">05/20/2021</div>
+    <!--Form nhập request-->
+    <div>
+        <div>
+            <div>
+
+                <div class="modal-body">
+                    <div>
+                        <a href="./index.html" style="text-decoration: none;" class="text-dark">
+
+                            <i class="fas fa-angle-left font-title text-muted d-inline"></i>
+                            <h5 class="rext-dark d-inline">TẠO ĐỀ XUẤT MỚI</h5>
+                        </a>
+
+                    </div>
+                    <hr>
+                    <form action="">
+                        <div class="row">
+                            <div class="col-3">
+                                <label class="font-weight-bold">Issus date (Ngày phát hành) *</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-3">
+                                <label class="font-weight-bold">Dept (Bộ phận) *</label>
+                            </div>
+                            <div class="col-9">
+                                <select class="form-control" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-3">
+                                <label class="font-weight-bold">Name (Họ tên) *</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-3">
+                                <label class="font-weight-bold">Loại Supply *</label>
+                            </div>
+                            <div class="col-9">
+                                <select class="form-control" aria-label="Default select example">
+                                    <option selected>S1 Nguyên vật liệu phụ
+                                        副資材
+                                    </option>
+                                    <option value="1"> S2　Vật tư tiêu hao văn phòng (GA)　　　総務消耗品
+                                    </option>
+                                    <option value="2"> S3 Vật tư tiêu hao sản xuất
+                                    </option>
+                                    <option value="3">S4 Văn phòng phẩm </option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr>
+                           <h4>THÔNG TIN SẢN PHẨM</h4> 
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered mt-3">
+                                <thead>
+                                    <th>No</th>
+                                    <th>Code No</th>
+                                    <th width="300px">Item name</th>
+                                    <th width="300px">Description</th>
+                                    <th>Vendor</th>
+                                    <th>Unit_Price</th>
+                                    <th>Qty</th>
+                                    <th>Unit<span class="font-italic">(kg*pcs)</span></th>
+                                    <th width="100px">Amount<span class="font-italic">(USD or VND)</span></th>
+                                    <th width="50px">Owner of Item</th>
+                                    <th width="50px">Cost Center</th>
+                                    <th></th>
+                                    <th>Account code</th>
+                                    <th>Asset No.</th>
+                                    <th></th>
+                                </thead>
+                                <thead>
+                                    <th class="font-weight-normal">STT</th>
+                                    <th class="font-weight-normal">Mã số</th>
+                                    <th class="font-weight-normal">Tiền hàng</th>
+                                    <th class="font-weight-normal">Quy cách</th>
+                                    <th class="font-weight-normal">Nhà cung cấp</th>
+                                    <th class="font-weight-normal">Đơn giá</th>
+                                    <th class="font-weight-normal">Số lượng</th>
+                                    <th class="font-weight-normal">Đơn vị</th>
+                                    <th class="font-weight-normal">Số tiền</th>
+                                    <th class="font-weight-normal">U→UMC
+                                        C→Customer</th>
+                                    <th class="font-weight-normal">AI/SMT/FAT/
+                                        Other/Office</th>
+
+                                    <th class="font-weight-normal">（A)→Asset
+                                        （K)→Expense</th>
+                                    <th class="font-weight-normal">Tài khoản</th>
+                                    <th class="font-weight-normal">Số tài khoản</th>
+                                    <th></th>
+                                </thead>
+                                <tbody id="tableInfo">
+                                    <tr class="row-info">
+                                        <td>1</td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+
+                                        <td>
+                                            <div class="form-inline">
+                                                <input type="radio" name="owner" value="u">
+                                                <label for="u">U</label>
+                                                <input type="radio" name="owner" value="c" class="ml-2">
+                                                <label for="c">C</label>
+                                            </div>
+                                        </td>
+                                        <td><input class="form-input"></input></td>
+
+                                        <td>
+                                            <div class="form-inline">
+                                                <input type="radio" name="assets" value="a">
+                                                <label for="a">A</label>
+                                                <input type="radio" name="assets" value="k" class="ml-2">
+                                                <label for="k">K</label>
+                                            </div>
+                                        </td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="row-info">
+                                        <td>2</td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+
+                                        <td>
+                                            <div class="form-inline">
+                                                <input type="radio" name="owner" value="u">
+                                                <label for="u">U</label>
+                                                <input type="radio" name="owner" value="c" class="ml-2">
+                                                <label for="c">C</label>
+                                            </div>
+                                        </td>
+                                        <td><input class="form-input"></input></td>
+
+                                        <td>
+                                            <div class="form-inline">
+                                                <input type="radio" name="assets" value="a">
+                                                <label for="a">A</label>
+                                                <input type="radio" name="assets" value="k" class="ml-2">
+                                                <label for="k">K</label>
+                                            </div>
+                                        </td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="row-info">
+                                        <td>3</td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+
+                                        <td>
+                                            <div class="form-inline">
+                                                <input type="radio" name="owner" value="u">
+                                                <label for="u">U</label>
+                                                <input type="radio" name="owner" value="c" class="ml-2">
+                                                <label for="c">C</label>
+                                            </div>
+                                        </td>
+                                        <td><input class="form-input"></input></td>
+
+                                        <td>
+                                            <div class="form-inline">
+                                                <input type="radio" name="assets" value="a">
+                                                <label for="a">A</label>
+                                                <input type="radio" name="assets" value="k" class="ml-2">
+                                                <label for="k">K</label>
+                                            </div>
+                                        </td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="row-info">
+                                        <td>4</td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+
+                                        <td>
+                                            <div class="form-inline">
+                                                <input type="radio" name="owner" value="u">
+                                                <label for="u">U</label>
+                                                <input type="radio" name="owner" value="c" class="ml-2">
+                                                <label for="c">C</label>
+                                            </div>
+                                        </td>
+                                        <td><input class="form-input"></input></td>
+
+                                        <td>
+                                            <div class="form-inline">
+                                                <input type="radio" name="assets" value="a">
+                                                <label for="a">A</label>
+                                                <input type="radio" name="assets" value="k" class="ml-2">
+                                                <label for="k">K</label>
+                                            </div>
+                                        </td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                    </tr>
+                                    <tr class="row-info">
+                                        <td>5</td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+
+                                        <td>
+                                            <div class="form-inline">
+                                                <input type="radio" name="owner" value="u">
+                                                <label for="u">U</label>
+                                                <input type="radio" name="owner" value="c" class="ml-2">
+                                                <label for="c">C</label>
+                                            </div>
+                                        </td>
+                                        <td><input class="form-input"></input></td>
+
+                                        <td>
+                                            <div class="form-inline">
+                                                <input type="radio" name="assets" value="a">
+                                                <label for="a">A</label>
+                                                <input type="radio" name="assets" value="k" class="ml-2">
+                                                <label for="k">K</label>
+                                            </div>
+                                        </td>
+                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input></td>
+                                    </tr>
+
+                                    <tr class="summary">
+                                        <td colspan="6"></td>
+                                        <td colspan="2">TOTAL</td>
+                                        <td class="font-weight-bold total">0</td>
+                                        <td class="font-weight-bold" colspan="2">（USD or VND）</td>
+                                        <td colspan="3"></td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div id="contextMenu" class="dropdown clearfix">
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"
+                                style="display:block;position:static;margin-bottom:5px;">
+                                <li><a tabindex="-1" href="javascript:void(0)" style="text-decoration:none;"
+                                        class="text-muted ml-2">Thêm dòng</a>
+                                </li>
+
+                            </ul>
+                        </div>
+
                 </div>
-                <div class="row">
-                    <div class="col">DEPT <span class="font-italic">(Bộ phận)</span></div>
-                    <div class="col">IT</div>
-                </div>
-                <div class="row">
-                    <div class="col">NAME <span class="font-italic">(Họ tên)</span></div>
-                    <div class="col">Hà thị hoàn</div>
-                </div>
-            </div>
-        </div>
-        <table class="table table-bordered ">
-            <thead>
-                <th>No</th>
-                <th>Code No</th>
-                <th>Item name</th>
-                <th>Description</th>
-                <th>Vendor</th>
-                <th>Unit_Price</th>
-                <th>Qty</th>
-                <th>Unit<span class="font-italic">(kg*pcs)</span></th>
-                <th>Amount<span class="font-italic">(USD or VND)</span></th>
-                <th>Owner of Item</th>
-                <th>Cost Center</th>
-                <th>Account code</th>
-                <th>Asset No.</th>
-            </thead>
-            <thead>
-                <th class="font-weight-normal">STT</th>
-                <th class="font-weight-normal">Mã số</th>
-                <th class="font-weight-normal">Tiền hàng</th>
-                <th class="font-weight-normal">Quy cách</th>
-                <th class="font-weight-normal">Nhà cung cấp</th>
-                <th class="font-weight-normal">Đơn giá</th>
-                <th class="font-weight-normal">Số lượng</th>
-                <th class="font-weight-normal">Đơn vị</th>
-                <th class="font-weight-normal">Số tiền</th>
-                <th class="font-weight-normal">U→UMC
-                    C→Customer</th>
-                <th class="font-weight-normal">AI/SMT/FAT/
-                    Other/Office</th>
-                <th class="font-weight-normal">Tài khoản</th>
-                <th class="font-weight-normal">Số tài khoản</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="6"></td>
-                    <td colspan="2">TOTAL <span class="font-italic">(Tổng số)</span></td>
-                    <td class="font-weight-bold">0</td>
-                    <td colspan="2" class="font-weight-bold">（USD or VND）</td>
-                    <td></td>
-                    <td></td>
 
-                </tr>
-
-
-            </tbody>
-        </table>
-        <div class="row">
-            <div class="col-8">
-                <p>Request Delivery Date <span class="font-italic">(Ngày yêu cầu giao
-                        hàng):</span>05/18/2021
-                </p>
-                <p>Remark<span class="font-italic">(Ghi chú): </p>
-            </div>
-            <div class="col-4">
-                <p>Round robin YES(Co) NO(Không)</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-8">
-                <table class="table table-bordered ">
-                    <tbody>
-                        <tr>
-                            <td>1.Apply </td>
-                            <td>2.Dept Manager</td>
-                            <td>3.Asset Center</td>
-                            <td>4.Factory Manager</td>
-                            <td>5.General Director</td>
-                            <td>6.Purchasing Dept</td>
-                            <td colspan="2">7.Receive Check</td>
-                        </tr>
-                        <tr>
-                            <td class="font-italic">Người đề xuất </td>
-                            <td class="font-italic">Trưởng phòng</td>
-                            <td class="font-italic">Qty tài sản</td>
-                            <td class="font-italic">Giám đốc xưởng</td>
-                            <td class="font-italic">Tổng giám đốc</td>
-                            <td class="font-italic">Người duyệt</td>
-                            <td class="font-italic">Applicant</td>
-                            <td class="font-italic">Asset Center</td>
-                        </tr>
-                        <tr height="100px">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="col-4">
-                <div class="border p-2">
-                    <p>Request expenses to Customer ? YES / NO) 　　客先費用請求あり？　なし？
-                    </p>
-                    <p>
-                        Có yêu cầu khách hàng thanh toán : Có / Không
-                    </p>
-                </div>
-                <div class="border p-2">
-                    <p>
-                        →if YES , How to request?　どのような方法で請求を行いますか(売上単価上乗せ、ＤＮ請求　等）
-
-                    </p>
-                    <p>Nếu có thì yêu cầu như thế nào ( cho vào đơn giá bán hàng , hay yêu cầu DN …)</p>
+                <div class="row form-inline m-5">
+                    <div class="col-1"></div>
+                    <div class="col-1"></div>
                 </div>
 
+                </form>
+
             </div>
-        </div>
-        <div class="row">
-            <div class="col-1">
-                <p class="text-danger">Chú ý :</p>
-            </div>
-            <div class="col-11">
-                <p class="text-danger">1,500USD以上の物品購入は社長承認印を取得して下さい。その物品が固定資産（1,500USD以上)に該当するときは稟議書を添付してください。</p>
-                <p class="text-danger">Nếu mua hàng hóa lớn hơn 1,500 usd, thì cần ký, đóng dấu của Tổng giám đốc. Mặt hàng này là Tài sản
-                    cố định thì cần kèm theo cả Round Robin</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-1"></div>
-            <div class="col-11">
-                <p>要求を発行する時に購買部門からの最新見積りを取得するのが必要（見積りの有効は６ヶ月、６ヶ月つき１回変わる事）。見積りは購買部長の承認を取得しないはならない事（見積を頂くまで７日間</p>
-                <p>Khi bộ phận làm supply sẽ phải lấy báo giá mới nhất từ PL (báo giá có hiệu lực trong 6 tháng sẽ thay
-                    đổi 1 lần). Báo giá phải được sự phê duyệt từ trưởng phòng PL (thời gian xin báo giá là 7 ngày)</p>
-            </div>
+
         </div>
     </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+    <script src="js/moment.js"></script>
+    <script src="js/jquery.simplePagination.js"></script>
+    <script src="js/pagination.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/datatables-demo.js"></script>
+    <script type='text/javascript' src="js/bootstrap-typeahead.js"></script>
+    <script type='text/javascript' src="js/mention.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

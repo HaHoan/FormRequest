@@ -27,139 +27,176 @@
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     });
-    $('#listRequestForm li').on('click', function (e) {
-        $("#findRequestForm").modal('hide');
-        $("#enterRequestForm").modal('show');
-    });
-    var listInfos = [];
 
-    $('#btnAddInfo').on('click', function (e) {
-        addRowInfo();
-        refreshListInfo();
+    $('html').click(function () {
+        $contextMenu.hide();
     });
-    function addRowInfo() {
-        var newInfo = {
-            No: $('#txbNo').val(),
-            ItemName: $('#txbItemName').val(),
-            Desc: $('#txbDesc').val(),
-            Vendor: $('#txbVendor').val(),
-            Price: $('#txbPrice').val(),
-            Qty: $('#txbQty').val(),
-            Unit: $('#txbUnit').val(),
-            Amount: $('#txbAmount').val(),
-            OwnerItem: $('#txbOwnerItem').val(),
-            CostCenter: $('#txbCostCenter').val(),
-            Account: $('#txbAccount').val(),
-            Asset: $('#txbAsset').val()
-        };
-        listInfos.push(newInfo);
+    function addTd() {
+        var col2 = $('<td/>');
+        var input2 = $('<input/>', {
+            class: 'form-input',
+            change: function () {
+                $('.total').text(getTotalAmount())
+            }
+        })
+        col2.append(input2);
+        return col2;
     }
-    function refreshListInfo() {
-        $("#tableInfo").html("");
-        var total = 0;
-        listInfos.forEach(function (m, index) {
-            var row = $('<tr/>');
-            var Index = $('<td/>', {
-                text: (index + 1)
-            });
-            var No = $('<td/>', {
-                text: m.No
-            });
-            var ItemName = $('<td/>', {
-                text: m.ItemName
-            });
-            var Desc = $('<td/>', {
-                text: m.Desc
-            });
-            var Vendor = $('<td/>', {
-                text: m.Vendor
-            });
-            var Price = $('<td/>', {
-                text: m.Price
-            });
-            if (m.Amount != '')
-                total += parseFloat(m.Amount);
-            var Qty = $('<td/>', {
-                text: m.Qty
-            });
-            var Unit = $('<td/>', {
-                text: m.Unit
-            });
-            var Amount = $('<td/>', {
-                text: m.Amount
-            });
-            var OwnerItem = $('<td/>', {
-                text: m.OwnerItem
-            });
-            var CostCenter = $('<td/>', {
-                text: m.CostCenter
-            });
-            var Account = $('<td/>', {
-                text: m.Account
-            });
-            var Asset = $('<td/>', {
-                text: m.Asset
-            });
-            var rowDelete = $('<td/>');
-            var btnXoa = $('<button/>', {
-                text: 'Xóa',
-                type: 'button',
-                class: 'btnXoa btn btn-danger',
-                click: function () {
-                    deleteRowInfo(index);
-                }
-            });
-            rowDelete.append(btnXoa);
-            row.append(Index);
-            row.append(No);
-            row.append(ItemName);
-            row.append(Desc);
-            row.append(Vendor);
-            row.append(Qty);
-            row.append(Unit);
-            row.append(Amount);
-            row.append(OwnerItem);
-            row.append(CostCenter);
-            row.append(Account);
-            row.append(Asset);
-            row.append(rowDelete);
+    $("#contextMenu li a").click(function (e) {
+        var index = $('#tableInfo tr').length;
+        var row = $('<tr/>');
+        var col1 = $('<td/>', {
+            text: (index)
+        })
+        row.append(col1);
+        row.append(addTd());
+        row.append(addTd());
+        row.append(addTd());
+        row.append(addTd());
+        row.append(addTd());
+        row.append(addTd());
+        row.append(addTd());
+        row.append(addTd());
+        var col3 = $("<td/>");
+        var div3 = $('<div/>', {
+            class: "form-inline"
+        });
+        var input3 = $('<input/>', {
+            type: 'radio',
+            name: "owner" + index,
+            val: "u"
+        });
+        var label3 = $("<label/>", {
+            for: "u",
+            text: "U"
+        })
+        div3.append(input3);
+        div3.append(label3);
+        var input3 = $('<input/>', {
+            type: 'radio',
+            name: "owner" + index,
+            val: "c"
+        });
+        var label3 = $("<label/>", {
+            for: "c",
+            text: "C"
+        })
+        div3.append(input3);
+        div3.append(label3);
+        col3.append(div3);
+        row.append(col3);
 
-            $('#tableInfo').append(row);
+        row.append(addTd())
+
+        var col4 = $("<td/>");
+        var div4 = $('<div/>', {
+            class: "form-inline"
+        });
+        var input4 = $('<input/>', {
+            type: 'radio',
+            name: "assets" + index,
+            val: "a"
+        });
+        var label4 = $("<label/>", {
+            for: "a",
+            text: "A"
+        })
+        div4.append(input4);
+        div4.append(label4);
+        var input4 = $('<input/>', {
+            type: 'radio',
+            name: "assets" + index,
+            val: "K"
+        });
+        var label4 = $("<label/>", {
+            for: "k",
+            text: "K"
+        })
+        div4.append(input4);
+        div4.append(label4);
+        col4.append(div4);
+        row.append(col4);
+        var rowDelete = $('<td/>');
+        var btnXoa = $('<button/>', {
+            text: 'Xóa',
+            type: 'button',
+            class: 'btnXoa btn btn-danger',
+            click: function () {
+                deleteRow(this)
+            }
+        });
+        row.append(addTd())
+        row.append(addTd())
+        rowDelete.append(btnXoa);
+
+        row.append(rowDelete);
+        $('#tableInfo').append(row);
+        $('.summary').remove();
+        var row = $('<tr/>', {
+            class: 'summary'
+        });
+        var td1 = $('<td/>', {
+            colspan: "6"
+        });
+        var td2 = $('<td/>', {
+            colspan: "2",
+            class: "font-weight-bold",
+            text: "TOTAL"
+        });
+        var td3 = $('<td/>', {
+            text: getTotalAmount(),
+            class: "font-weight-bold total"
+        });
+        var td4 = $('<td/>', {
+            colspan: "2",
+            class: "font-weight-bold",
+            text: "（USD or VND）"
+        });
+        row.append(td1);
+        row.append(td2);
+        row.append(td3);
+        row.append(td4);
+        row.append($('<td/>'));
+        row.append($('<td/>'));
+        row.append($('<td/>'));
+        $('#tableInfo').append(row);
+    });
+    $(".btnXoa").on('click', function () {
+        deleteRow(this);
+    })
+    function updateSTT() {
+        var index = 1;
+        $('#tableInfo tr').each(function (rowIndex) {
+            var stt = $('#tableInfo tr:eq(' + rowIndex + ') td:eq(0)').text();
+            if (stt) {
+                $('#tableInfo tr:eq(' + rowIndex + ') td:eq(0)').text(index);
+                index++;
+            }
 
         });
-        if (listInfos.length > 0) {
-            var row = $('<tr/>');
-            var td1 = $('<td/>', {
-                colspan: "6"
-            });
-            var td2 = $('<td/>', {
-                colspan: "2",
-                text: "TOTAL"
-            });
-            var td3 = $('<td/>', {
-                text: total,
-                class: "font-weight-bold"
-            });
-            var td4 = $('<td/>', {
-                colspan: "2",
-                class: "font-weight-bold",
-                text: "（USD or VND）"
-            });
-            row.append(td1);
-            row.append(td2);
-            row.append(td3);
-            row.append(td4);
-            row.append($('<td/>'));
-            row.append($('<td/>'));
-            row.append($('<td/>'));
-            $('#tableInfo').append(row);
-        }
-
     }
-    function deleteRowInfo(index) {
-        listInfos.splice(index, 1);
-        refreshListInfo();
-    };
+    function deleteRow(e) {
+        $(e).parent().parent().remove();
+        $(".total").text(getTotalAmount())
+        updateSTT();
+    }
+    function getTotalAmount() {
+        var total = 0;
+        $('#tableInfo tr').each(function (rowIndex) {
+            var amount = $('#tableInfo tr:eq(' + rowIndex + ') td:eq(8) input').val();
+            if (typeof amount !== "undefined" && amount) {
+                total += parseInt(amount);
+            }
+
+        });
+        if (isNaN(total)) return "0"
+        else
+            return total;
+    }
+    $('.form-input').on('change', function () {
+        $('.total').text(getTotalAmount())
+    });
+
 
     $('.request-item').click(function (e) {
         var item = $(this).prop('name');
@@ -178,25 +215,27 @@
             class: "row"
         });
         var col1 = $('<div/>', {
-            class: "col-3"
+            class: "d-inline ml-2"
         });
         var img = $('<img/>', {
             src: "https://cdn.brvn.vn/news/480px/2017/13343_Maruko.jpg",
-            alt: "avatar"
+            alt: "avatar",
+            class: "avatar"
         });
         col1.append(img);
         row.append(col1);
         var col2 = $('<div/>', {
-            class: "col-8"
+            class: "d-inline ml-1"
         });
 
         var name = $('<div/>', {
-            class: "font-weight-bold mt-2",
+            class: "font-weight-bold mt-2 ml-1",
             text: "Ha Hoan"
         });
         col2.append(name);
         var date = $('<div/>', {
-            text: moment().calendar()
+            text: moment().calendar(),
+            class: "ml-2 text-muted"
         });
 
         col2.append(date);
@@ -257,6 +296,19 @@
         console.log(userTag);
     });
 
+    var $contextMenu = $("#contextMenu");
+
+    $("body").on("contextmenu", "table tr", function (e) {
+        $contextMenu.css({
+            display: "block",
+            left: e.pageX,
+            top: e.pageY
+        });
+        return false;
+    });
+
+
+
     /* Tag friends */
     var users = [
         {
@@ -292,5 +344,5 @@
         users: users
     });
 
-  
+
 })(jQuery);
