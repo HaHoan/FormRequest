@@ -72,20 +72,39 @@
                                 <label class="font-weight-bold">Loại Supply *</label>
                             </div>
                             <div class="col-9">
-                                <select class="form-control" aria-label="Default select example">
-                                    <option selected>S1 Nguyên vật liệu phụ
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="s1">
+                                    <label class="form-check-label" for="s1">
+                                        S1 Nguyên vật liệu phụ
                                         副資材
-                                    </option>
-                                    <option value="1"> S2　Vật tư tiêu hao văn phòng (GA)　　　総務消耗品
-                                    </option>
-                                    <option value="2"> S3 Vật tư tiêu hao sản xuất
-                                    </option>
-                                    <option value="3">S4 Văn phòng phẩm </option>
-                                </select>
+                                    </label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="s2">
+                                    <label class="form-check-label" for="s1">
+                                        S1 Nguyên vật liệu phụ
+                                        副資材
+                                    </label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="s3">
+                                    <label class="form-check-label" for="s1">
+                                        S1 Nguyên vật liệu phụ
+                                        副資材
+                                    </label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="s4">
+                                    <label class="form-check-label" for="s1">
+                                        S1 Nguyên vật liệu phụ
+                                        副資材
+                                    </label>
+                                </div>
+
                             </div>
                         </div>
                         <hr>
-                           <h4>THÔNG TIN SẢN PHẨM</h4> 
+                        <h4>THÔNG TIN SẢN PHẨM</h4>
 
                         <div class="table-responsive">
                             <table class="table table-bordered mt-3">
@@ -141,9 +160,9 @@
 
                                         <td>
                                             <div class="form-inline">
-                                                <input type="radio" name="owner" value="u">
+                                                <input type="radio" name="owner-1" value="u" checked>
                                                 <label for="u">U</label>
-                                                <input type="radio" name="owner" value="c" class="ml-2">
+                                                <input type="radio" name="owner-1" value="c" class="ml-2">
                                                 <label for="c">C</label>
                                             </div>
                                         </td>
@@ -151,9 +170,9 @@
 
                                         <td>
                                             <div class="form-inline">
-                                                <input type="radio" name="assets" value="a">
+                                                <input type="radio" name="assets-1" value="a" checked>
                                                 <label for="a">A</label>
-                                                <input type="radio" name="assets" value="k" class="ml-2">
+                                                <input type="radio" name="assets-1" value="k" class="ml-2">
                                                 <label for="k">K</label>
                                             </div>
                                         </td>
@@ -174,9 +193,9 @@
 
                                         <td>
                                             <div class="form-inline">
-                                                <input type="radio" name="owner" value="u">
+                                                <input type="radio" name="owner-2" value="u" checked>
                                                 <label for="u">U</label>
-                                                <input type="radio" name="owner" value="c" class="ml-2">
+                                                <input type="radio" name="owner-2" value="c" class="ml-2">
                                                 <label for="c">C</label>
                                             </div>
                                         </td>
@@ -184,9 +203,9 @@
 
                                         <td>
                                             <div class="form-inline">
-                                                <input type="radio" name="assets" value="a">
+                                                <input type="radio" name="assets-2" value="a" checked>
                                                 <label for="a">A</label>
-                                                <input type="radio" name="assets" value="k" class="ml-2">
+                                                <input type="radio" name="assets-2" value="k" class="ml-2">
                                                 <label for="k">K</label>
                                             </div>
                                         </td>
@@ -207,9 +226,9 @@
 
                                         <td>
                                             <div class="form-inline">
-                                                <input type="radio" name="owner" value="u">
+                                                <input type="radio" name="owner-3" value="u" checked>
                                                 <label for="u">U</label>
-                                                <input type="radio" name="owner" value="c" class="ml-2">
+                                                <input type="radio" name="owner-3" value="c" class="ml-2">
                                                 <label for="c">C</label>
                                             </div>
                                         </td>
@@ -217,9 +236,9 @@
 
                                         <td>
                                             <div class="form-inline">
-                                                <input type="radio" name="assets" value="a">
+                                                <input type="radio" name="assets-3" value="a" checked>
                                                 <label for="a">A</label>
-                                                <input type="radio" name="assets" value="k" class="ml-2">
+                                                <input type="radio" name="assets-3" value="k" class="ml-2">
                                                 <label for="k">K</label>
                                             </div>
                                         </td>
@@ -240,9 +259,9 @@
 
                                         <td>
                                             <div class="form-inline">
-                                                <input type="radio" name="owner" value="u">
+                                                <input type="radio" name="owner-4" value="u" checked>
                                                 <label for="u">U</label>
-                                                <input type="radio" name="owner" value="c" class="ml-2">
+                                                <input type="radio" name="owner-4" value="c" class="ml-2">
                                                 <label for="c">C</label>
                                             </div>
                                         </td>
@@ -250,14 +269,15 @@
 
                                         <td>
                                             <div class="form-inline">
-                                                <input type="radio" name="assets" value="a">
+                                                <input type="radio" name="assets-4" value="a" checked>
                                                 <label for="a">A</label>
-                                                <input type="radio" name="assets" value="k" class="ml-2">
+                                                <input type="radio" name="assets-4" value="k" class="ml-2">
                                                 <label for="k">K</label>
                                             </div>
                                         </td>
                                         <td><input class="form-input"></input></td>
                                         <td><input class="form-input"></input></td>
+                                        <td></td>
                                     </tr>
                                     <tr class="row-info">
                                         <td>5</td>
@@ -272,9 +292,9 @@
 
                                         <td>
                                             <div class="form-inline">
-                                                <input type="radio" name="owner" value="u">
+                                                <input type="radio" name="owner-5" value="u" checked>
                                                 <label for="u">U</label>
-                                                <input type="radio" name="owner" value="c" class="ml-2">
+                                                <input type="radio" name="owner-5" value="c" class="ml-2">
                                                 <label for="c">C</label>
                                             </div>
                                         </td>
@@ -282,34 +302,88 @@
 
                                         <td>
                                             <div class="form-inline">
-                                                <input type="radio" name="assets" value="a">
+                                                <input type="radio" name="assets-5" value="a" checked>
                                                 <label for="a">A</label>
-                                                <input type="radio" name="assets" value="k" class="ml-2">
+                                                <input type="radio" name="assets-5" value="k" class="ml-2">
                                                 <label for="k">K</label>
                                             </div>
                                         </td>
                                         <td><input class="form-input"></input></td>
                                         <td><input class="form-input"></input></td>
+                                        <td></td>
                                     </tr>
-
+                                  
                                     <tr class="summary">
-                                        <td colspan="6"></td>
+                                        <td colspan="6"><textarea class="form-input" cols="30" rows="2"></textarea></td>
                                         <td colspan="2">TOTAL</td>
                                         <td class="font-weight-bold total">0</td>
                                         <td class="font-weight-bold" colspan="2">（USD or VND）</td>
                                         <td colspan="3"></td>
                                     </tr>
 
-
                                 </tbody>
                             </table>
+                            <div></div>
                         </div>
+                        <div class="row mt-2">
+                            <div class="col-3">
+                                Request Delivery Date ( Ngày yêu cầu giao hàng) :
+                            </div>
+                            <div class="col-9"><input type="date" class="form-control"></div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-3">
+                                Remark (Ghi chú):
+                            </div>
+                            <div class="col-9">
+                                <textarea rows="3" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-3">Round robin</div>
+                            <div class="col-9">
+                                <div class="form-inline">
+                                    <input type="radio" name="robin" value="y">
+                                    <label for="y" class="ml-2">Yes</label>
+                                    <input type="radio" name="robin" value="n" class="ml-4" checked>
+                                    <label for="n" class="ml-2">No</label>
+                                    <input type="file" id="robinAttach" class="ml-4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-3">Request expenses to Customer ?客先費用請求あり？　なし？ </div>
+                            <div class="col-9">
+                                <div class="form-inline">
+                                    <input type="radio" name="request-expenses" value="y">
+                                    <label for="y" class="ml-2">Yes</label>
+                                    <input type="radio" name="request-expenses" value="n" class="ml-4" checked>
+                                    <label for="n" class="ml-2">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-3">Có yêu cầu khách hàng thanh toán :</div>
+                            <div class="col-2">
+                                <div class="form-inline">
+                                    <input type="radio" name="customer-checkout" value="y">
+                                    <label for="y" class="ml-2">Yes</label>
+                                    <input type="radio" name="customer-checkout" value="n" class="ml-4" checked>
+                                    <label for="n" class="ml-2">No</label>
 
+                                </div>
+                            </div>
+                            <div class="col-7 " id="customer-checkout-info">
+                                Yêu cầu như thế nào ( cho vào đơn giá bán hàng , hay yêu cầu DN …)
+                                <br>
+                                <textarea class="form-control" rows="2"></textarea>
+                            </div>
+                        </div>
                         <div id="contextMenu" class="dropdown clearfix">
                             <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"
                                 style="display:block;position:static;margin-bottom:5px;">
                                 <li><a tabindex="-1" href="javascript:void(0)" style="text-decoration:none;"
-                                        class="text-muted ml-2">Thêm dòng</a>
+                                        class="text-muted ml-2"><i class="fas fa-plus"></i> Thêm dòng</a>
                                 </li>
 
                             </ul>
@@ -343,7 +417,7 @@
     <script src="assets/demo/datatables-demo.js"></script>
     <script type='text/javascript' src="js/bootstrap-typeahead.js"></script>
     <script type='text/javascript' src="js/mention.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/form.js"></script>
 </body>
 
 </html>
