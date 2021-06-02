@@ -72,34 +72,95 @@
                                 <label class="font-weight-bold">Loại Supply *</label>
                             </div>
                             <div class="col-9">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="s1">
-                                    <label class="form-check-label" for="s1">
-                                        S1 Nguyên vật liệu phụ
-                                        副資材
-                                    </label>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="s1">
+                                            <label class="form-check-label" for="s1">
+                                                S1 Nguyên vật liệu phụ
+                                                (副資材)
+                                            </label>
+                                        </div>
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input" type="checkbox" value="" id="s2">
+                                            <label class="form-check-label" for="s1">
+                                                S2 Vật tư tiêu hao văn phòng (GA)(総務消耗品)
+                                            </label>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="s4">
+                                            <label class="form-check-label" for="s1">
+                                                S3  Vật tư tiêu hao sản xuất(製造消耗品)
+                                                
+                                            </label>
+                                        </div>
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input" type="checkbox" value="" id="s4">
+                                            <label class="form-check-label" for="s1">
+                                                S4  Văn phòng phẩm (事務消耗品)
+                                            </label>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="s4">
+                                            <label class="form-check-label" for="s1">
+                                                S5 Cơ khí ( WS )(工作室消耗品)　
+
+                                            </label>
+                                        </div>
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input" type="checkbox" value="" id="s4">
+                                            <label class="form-check-label" for="s1">
+                                                S6 Thiết bị ( FC-IT)(設備消耗品)
+
+                                            </label>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="s4">
+                                            <label class="form-check-label" for="s1">
+                                                S7 Hàng sửa chữa(補修用部品消耗品)
+
+                                            </label>
+                                        </div>
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input" type="checkbox" value="" id="s4">
+                                            <label class="form-check-label" for="s1">
+                                                Tài sản cố định (固定資産)
+                                                
+
+                                            </label>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="checkbox" value="" id="s4">
+                                            <label class="form-check-label" for="s1">
+                                                Thiết bị cần hiệu chuẩn(較正する設備)
+                                                
+
+                                            </label>
+                                        </div>
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input" type="checkbox" value="" id="s4">
+                                            <label class="form-check-label" for="s1">
+                                                Khác(その他)
+                                                
+                                            </label>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
-                                <div class="form-check mt-2">
-                                    <input class="form-check-input" type="checkbox" value="" id="s2">
-                                    <label class="form-check-label" for="s1">
-                                        S1 Nguyên vật liệu phụ
-                                        副資材
-                                    </label>
-                                </div>
-                                <div class="form-check mt-2">
-                                    <input class="form-check-input" type="checkbox" value="" id="s3">
-                                    <label class="form-check-label" for="s1">
-                                        S1 Nguyên vật liệu phụ
-                                        副資材
-                                    </label>
-                                </div>
-                                <div class="form-check mt-2">
-                                    <input class="form-check-input" type="checkbox" value="" id="s4">
-                                    <label class="form-check-label" for="s1">
-                                        S1 Nguyên vật liệu phụ
-                                        副資材
-                                    </label>
-                                </div>
+                              
+                            
 
                             </div>
                         </div>
@@ -312,7 +373,7 @@
                                         <td><input class="form-input"></input></td>
                                         <td></td>
                                     </tr>
-                                  
+
                                     <tr class="summary">
                                         <td colspan="6"><textarea class="form-input" cols="30" rows="2"></textarea></td>
                                         <td colspan="2">TOTAL</td>
@@ -392,10 +453,12 @@
                 </div>
 
                 <div class="row form-inline m-5">
+                    <div class="col-5"></div>
+                    <button type="button" class="btn btn-light col-3" width="100px">Hủy</button>
                     <div class="col-1"></div>
-                    <div class="col-1"></div>
+                    <button class="btn btn-success col-3">Tạo đề xuất</button>
                 </div>
-
+                <br>
                 </form>
 
             </div>
@@ -418,7 +481,7 @@
     <script type='text/javascript' src="js/bootstrap-typeahead.js"></script>
     <script type='text/javascript' src="js/mention.js"></script>
     <script src="js/form.js"></script>
-   
+
 </body>
 
 </html>
