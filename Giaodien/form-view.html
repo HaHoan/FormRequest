@@ -22,15 +22,15 @@
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <a class="navbar-brand" href="index.html">
                 <i class="fas fa-home"></i>
-                Home
+                <span class="lang" key="Home">Trang chủ</span>
             </a>
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#!"><i
                     class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline mr-auto ml-0 ml-md-3 my-2 my-md-0">
                 <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search"
-                        aria-describedby="basic-addon2" />
+                    <input class="form-control lang" key="Search-for" type="text" placeholder="Tìm kiếm..."
+                        aria-label="Search" aria-describedby="basic-addon2" />
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
                     </div>
@@ -51,6 +51,29 @@
                         <a class="dropdown-item" href="login.html">Logout</a>
                     </div>
                 </div>
+                <div class="nav-item dropdown ml-2">
+                    <button class="btn btn-secondary  dropdown-toggle" type="button" id="userDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="./assets/img/vietnam.png" alt="" class="mr-1 icon-lang"><span class="text-lang">Tiếng
+                            Việt</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a id="vi" class="dropdown-item translate" href="#!"><img src="./assets/img/vietnam.png" alt="">
+                            Tiếng Việt
+
+                        </a>
+                        <a id="en" class="dropdown-item translate" href="#!"><img src="./assets/img/united-states.png"
+                                alt="">
+                            Tiếng Anh
+
+                        </a>
+                        <a id="ja" class="dropdown-item translate" href="#!"><img src="./assets/img/japan.png" alt="">
+                            Tiếng Nhật
+
+                        </a>
+
+                    </div>
+                </div>
             </ul>
         </nav>
     </header>
@@ -63,25 +86,26 @@
 
                         <a class="nav-link mt-4" href="./summary.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Tổng kết
+                            <span class="lang" key="Summary">Tổng kết</span>
                         </a>
                         <button class="btn btn-secondary ml-3 mr-5 mt-3" data-toggle="modal"
                             data-target="#findRequestForm">
                             <i class="fas fa-plus text-white"></i>
-                            Tạo đề xuất mới
+                            <span class="lang" key="create-request">Tạo đề xuất mới</span>
                         </button>
 
                         <div class="custom-control custom-checkbox ml-3 mt-4">
                             <input type="checkbox" class="custom-control-input" id="sendToMe" />
-                            <label class="custom-control-label" for="sendToMe">Gửi đến tôi</label>
+                            <label class="custom-control-label lang" key="send-to-me" for="sendToMe">Gửi đến tôi</label>
                         </div>
                         <div class="custom-control custom-checkbox ml-3 mt-4">
                             <input type="checkbox" class="custom-control-input" id="myRequest" />
-                            <label class="custom-control-label" for="myRequest">Tôi gửi đi</label>
+                            <label class="custom-control-label lang" key="my-request" for="myRequest">Tôi gửi đi</label>
                         </div>
                         <div class="custom-control custom-checkbox ml-3 mt-4">
                             <input type="checkbox" class="custom-control-input" id="myFollow">
-                            <label class="custom-control-label" for="myFollow">Đang theo dõi</label>
+                            <label class="custom-control-label lang" key="following" for="myFollow">Đang theo
+                                dõi</label>
                         </div>
                         <div class="sb-sidenav-menu-heading">Form biểu</div>
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts"
@@ -152,15 +176,16 @@
                             <br>
                             <a href="./index.html" style="text-decoration: none;">
                                 <i class="fas fa-angle-left font-title text-muted"></i>
-                                <span class="font-weight-bold ml-2 text-muted" style="font-size: 18px;">SUPPLY
-                                    REQUEST(YÊU CẦU CUNG CẤP)</span>
+                                <span class="font-weight-bold ml-2 text-muted lang text-uppercase"
+                                    key="title-supply-req" style="font-size: 18px;">YÊU CẦU CUNG CẤP</span>
                             </a>
 
                             <div class="row">
-                                <div class="col-11">
-                                    <p class="font-italic text-muted">Trạng thái:<span class="text-primary ml-2">Đang
-                                            chờ
-                                            duyệt</span></p>
+                                <div class="col-11 form-inline">
+                                    <span class="font-italic text-muted lang" key="state">Trạng thái:</span><span
+                                        class="text-primary ml-2 lang font-italic" key="waitting">Đang
+                                        chờ
+                                        duyệt</span>
                                 </div>
                                 <div class="col-1">
                                     <a href="./form-print.html" class="text-dark" target="_blank">
@@ -173,26 +198,27 @@
                             <hr>
                             <div class="row">
                                 <div class="col">
-                                    <button class="btn btn-success col">Chấp thuận</button>
+                                    <button class="btn btn-success col lang" key="accept">Chấp thuận</button>
                                 </div>
                                 <div class="col">
-                                    <button class="btn btn-danger col">Từ chối</button>
+                                    <button class="btn btn-danger col lang" key="reject">Từ chối</button>
                                 </div>
                             </div>
                             <div class="row mt-4">
                                 <div class="col-10">
-                                    <p class=" font-weight-bold">THÔNG TIN ĐỀ XUẤT</p>
+                                    <p class=" font-weight-bold text-uppercase lang" key="req-info">THÔNG TIN ĐỀ XUẤT</p>
                                 </div>
                                 <div class="col-2">
-                                    <p class="text-right">MÃ ĐỀ XUẤT: <span
-                                            class="text-primary font-weight-bold">12345</span></p>
+                                    <span class="text-right text-uppercase lang" key="code">MÃ ĐỀ XUẤT:</span>
+                                    <span
+                                    class="text-primary font-weight-bold text-right">12345</span>
                                 </div>
                             </div>
                             <hr class="mt-1">
                             <div class="row">
                                 <div class="col-2">
                                     <i class="fas fa-user-edit text-muted"></i>
-                                    <span class="text-muted">Người tạo</span>
+                                    <span class="text-muted lang" key="creator">Người tạo</span>
                                 </div>
                                 <div class="col-3">
                                     <p>Hà Thị Hoàn</p>
@@ -204,7 +230,7 @@
                             <div class="row">
                                 <div class="col-2">
                                     <i class="fas fa-clock text-muted"></i>
-                                    <span class="text-muted">Thời gian tạo</span>
+                                    <span class="text-muted lang" key="date-create">Thời gian tạo</span>
                                 </div>
                                 <div class="col-3">
                                     <p>18/05/2021 12:00</p>
@@ -214,7 +240,7 @@
                             <div class="row">
                                 <div class="col-2">
                                     <i class="far fa-calendar-alt text-muted"></i>
-                                    <span class="text-muted">Issue date(Ngày phát hành)</span>
+                                    <span class="text-muted lang" key="issus-date">Ngày phát hành</span>
                                 </div>
                                 <div class="col-3">
                                     <p>18/05/2021</p>
@@ -224,7 +250,7 @@
                             <div class="row">
                                 <div class="col-2">
                                     <i class="fas fa-building text-muted"></i>
-                                    <span class="text-muted">Dept(Bộ phận)</span>
+                                    <span class="text-muted lang" key="dept">Bộ phận</span>
                                 </div>
                                 <div class="col-3">
                                     <p>IT</p>
@@ -233,7 +259,7 @@
                             <div class="row">
                                 <div class="col-2">
                                     <i class="fas fa-layer-group text-muted"></i>
-                                    <span class="text-muted">Loại Supply</span>
+                                    <span class="text-muted lang" key="type-supply">Loại yêu cầu</span>
                                 </div>
                                 <div class="col-3">
                                     <p>S1 Nguyên vật liệu phụ
@@ -244,37 +270,23 @@
 
                             <div class="table-responsive mt-4">
                                 <table class="table table-bordered ">
+                                 
                                     <thead>
-                                        <th>No</th>
-                                        <th>Code No</th>
-                                        <th>Item name</th>
-                                        <th>Description</th>
-                                        <th>Vendor</th>
-                                        <th>Unit_Price</th>
-                                        <th>Qty</th>
-                                        <th>Unit<span class="font-italic">(kg*pcs)</span></th>
-                                        <th>Amount<span class="font-italic">(USD or VND)</span></th>
-                                        <th>Owner of Item</th>
-                                        <th>Cost Center</th>
-                                        <th>Account code</th>
-                                        <th>Asset No.</th>
-                                    </thead>
-                                    <thead>
-                                        <th class="font-weight-normal">STT</th>
-                                        <th class="font-weight-normal">Mã số</th>
-                                        <th class="font-weight-normal">Tiền hàng</th>
-                                        <th class="font-weight-normal">Quy cách</th>
-                                        <th class="font-weight-normal">Nhà cung cấp</th>
-                                        <th class="font-weight-normal">Đơn giá</th>
-                                        <th class="font-weight-normal">Số lượng</th>
-                                        <th class="font-weight-normal">Đơn vị</th>
-                                        <th class="font-weight-normal">Số tiền</th>
-                                        <th class="font-weight-normal">U→UMC
+                                        <th class="font-weight-normal lang" key="table-no">STT</th>
+                                        <th class="font-weight-normal lang" key="table-code">Mã số</th>
+                                        <th class="font-weight-normal lang" key="table-item-name">Tiền hàng</th>
+                                        <th class="font-weight-normal lang" key="table-desc">Quy cách</th>
+                                        <th class="font-weight-normal lang" key="table-vendor">Nhà cung cấp</th>
+                                        <th class="font-weight-normal lang" key="table-unit-price">Đơn giá</th>
+                                        <th class="font-weight-normal lang" key="table-qty">Số lượng</th>
+                                        <th class="font-weight-normal lang" key="table-unit">Đơn vị</th>
+                                        <th class="font-weight-normal lang" key="table-amount">Số tiền</th>
+                                        <th class="font-weight-normal lang" key="table-owner-of-item">U→UMC
                                             C→Customer</th>
-                                        <th class="font-weight-normal">AI/SMT/FAT/
+                                        <th class="font-weight-normal lang" key="table-cost-center">AI/SMT/FAT/
                                             Other/Office</th>
-                                        <th class="font-weight-normal">Tài khoản</th>
-                                        <th class="font-weight-normal">Số tài khoản</th>
+                                        <th class="font-weight-normal lang" key="table-account">Tài khoản</th>
+                                        <th class="font-weight-normal lang" key="table-account-no">Số tài khoản</th>
                                     </thead>
                                     <tbody>
                                         <tr>
@@ -369,7 +381,7 @@
                                         </tr>
                                         <tr>
                                             <td colspan="6"></td>
-                                            <td colspan="2">TOTAL <span class="font-italic">(Tổng số)</span>
+                                            <td colspan="2" class="lang"key="table-total text-uppercase">TOTAL
                                             </td>
                                             <td class="font-weight-bold">0</td>
                                             <td colspan="2" class="font-weight-bold">（USD or VND）</td>
@@ -383,30 +395,28 @@
                                 </table>
                             </div>
 
-                            <p class="font-weight-bold">**Thông tin thêm**</p>
-                            <p>- Request Delivery Date <span class="font-italic">(Ngày yêu cầu giao
-                                    hàng):</span>05/18/2021
-                            </p>
-                            <p>- Remark<span class="font-italic">(Ghi chú): </p>
+                            <p class="font-weight-bold text-uppercase lang" key="more-info">**Thông tin thêm**</p>
+                            <p class=" lang" key="req-delivery-date">- Request Delivery Date: <span>05/18/2021</span>
+                            <p class="lang" key="note">- Remark </p>
                             <div class="form-inline">
-                                <p>- Round robin</p>
+                                <p class="lang" key="round-robin">- Round robin</p>
                                 <div class="form-check m-3">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault"
                                         id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <label class="form-check-label lang" key="yes" for="flexRadioDefault1">
                                         YES
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault"
                                         id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
+                                    <label class="form-check-label lang" key="no" for="flexRadioDefault2">
                                         NO
                                     </label>
                                 </div>
                             </div>
                             <div>
-                                <p>- Request expenses to Customer ? YES / NO) 　　客先費用請求あり？　なし？</p>
+                                <p class="lang" key="req-expenses-cus">- Request expenses to Customer ? YES / NO) 　　客先費用請求あり？　なし？</p>
                                 <p class="ml-2">Có yêu cầu khách hàng thanh toán : Có / Không </p>
                             </div>
                             <div>
@@ -415,58 +425,108 @@
                                 </p>
                             </div>
                             <div class="form-inline">
-                                <p class="font-weight-bold">**File đính kèm*</p>
+                                <p class="font-weight-bold lang" key="attach">**File đính kèm*</p>
                                 <input type="file" name="fileAttach" class="ml-3">
                             </div>
 
 
-                            <h5 class="mt-4 text-success">HOẠT ĐỘNG CHÍNH</h5>
+                            <h5 class="mt-4 text-success text-uppercase lang" key="main-action">HOẠT ĐỘNG CHÍNH</h5>
                             <hr>
-                            <div id="steps-form-detail" class="steps-form container mt-5">
-                                <div id="step-form" class="steps-row setup-panel">
-                                    <div id="step-1" class="steps-step">
-                                        <a class="btn btn-secondary text-white btn-circle btn-success"
-                                            href="javascript:void(0)">1</a>
-                                        <pre>Dept Manager</pre>
+                            <div class="table-responsive">
+                                <table class="table table-bordered ">
+                                    <tbody>
+                                       
+                                        <tr>
+                                            <td class="font-italic lang" key="apply">Người đề xuất </td>
+                                            <td class="font-italic lang" key="dept-manager">Trưởng phòng</td>
+                                            <td class="font-italic lang" key="asset-center">Qty tài sản</td>
+                                            <td class="font-italic lang" key="factory-manager">Giám đốc xưởng</td>
+                                            <td class="font-italic lang" key="general-manager">Tổng giám đốc</td>
+                                            <td class="font-italic lang" key="purchasing-dept">Người duyệt</td>
+                                            <td class="font-italic lang" key="applicant">Applicant</td>
+                                            <td class="font-italic lang" key="asset-center-recive-check">Asset Center</td>
+                                        </tr>
+                                        <tr height="100px">
+                                            <td>
+                                                <div class="rubber_stamp">
+                                                    <p>UMC-VN</p>
+                                                    <p>22-6-2020</p>
+                                                    <p>T.T.Dung</p>
 
-                                    </div>
-                                    <div id="step-2" class="steps-step">
-                                        <a href="javascript:void(0)" type="button"
-                                            class="btn btn-success text-white btn-circle">2</a>
-                                        <pre>Assets</pre>
-                                    </div>
-                                    <div id="step-3" class="steps-step">
-                                        <a href="javascript:void(0)" type="button"
-                                            class="btn btn-success text-white btn-circle">3</a>
-                                        <pre>Factory Manager</pre>
-                                    </div>
-                                    <div id="step-4" class="steps-step">
-                                        <a href="javascript:void(0)" type="button"
-                                            class="btn btn-success text-white btn-circle">4</a>
-                                        <pre>General Director</pre>
-                                    </div>
-                                    <div id="step-5" class="steps-step">
-                                        <a href="javascript:void(0)" type="button"
-                                            class="btn btn-success text-white btn-circle">5</a>
-                                        <pre>Purchasing Dept</pre>
-                                    </div>
-                                    <div id="step-6" class="steps-step">
-                                        <a href="javascript:void(0)" type="button"
-                                            class="btn btn-secondary text-white btn-circle">6</a>
-                                        <pre>Applicant</pre>
-                                    </div>
-                                    <div id="step-7" class="steps-step">
-                                        <a href="javascript:void(0)" type="button"
-                                            class="btn btn-secondary text-white btn-circle">7</a>
-                                        <pre>Asset Center</pre>
-                                    </div>
-                                </div>
+                                                </div>
+                                            </td>
 
+                                            <td class="">
+                                                <div class="rubber_stamp">
+                                                    <p>UMC-VN</p>
+                                                    <p>22-6-2020</p>
+                                                    <p>T.T.Dung</p>
+
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="rubber_stamp">
+                                                    <p>UMC-VN</p>
+                                                    <p>22-6-2020</p>
+                                                    <p>T.T.Dung</p>
+
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="rubber_stamp">
+                                                    <p>UMC-VN</p>
+                                                    <p>22-6-2020</p>
+                                                    <p>T.T.Dung</p>
+
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="rubber_stamp">
+                                                    <p>UMC-VN</p>
+                                                    <p>22-6-2020</p>
+                                                    <p>T.T.Dung</p>
+
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="rubber_stamp">
+                                                    <p>UMC-VN</p>
+                                                    <p>22-6-2020</p>
+                                                    <p>T.T.Dung</p>
+
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="rubber_stamp">
+                                                    <p>UMC-VN</p>
+                                                    <p>22-6-2020</p>
+                                                    <p>T.T.Dung</p>
+
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="rubber_stamp">
+                                                    <p>UMC-VN</p>
+                                                    <p>22-6-2020</p>
+                                                    <p>T.T.Dung</p>
+
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
 
                         </div>
                         <div class="col-md-2">
-                            <h5 class="mt-4 text-success">THẢO LUẬN</h5>
+                            <h5 class="mt-4 text-success text-uppercase lang" key="comment">THẢO LUẬN</h5>
                             <hr>
                             <div class="row">
                                 <div class="d-inline ml-2">
@@ -481,8 +541,8 @@
                                 <textarea id="txbComment" class="form-control ml-2 mt-2"></textarea>
                                 <p id="txbViewComment"></p>
                             </div>
-                            <button class="btn btn-success" id="btnAddComment">Gửi</button>
-                            <p class="mt-4 text-muted"><span id="totalComment">0</span> THẢO LUẬN</p>
+                            <button class="btn btn-success lang" key="send" id="btnAddComment">Gửi</button>
+                            <p class="mt-4 text-muted"><span id="totalComment">0</span> <span  class="lang text-uppercase" key="comment">Thảo luận</span></p>
                             <hr>
                             <ul class="list-group list-group-flush list-comment">
 
@@ -499,36 +559,36 @@
 
 
     <div class="modal fade" id="findRequestForm" tabindex="-1" role="dialog" aria-labelledby="findRequestFormTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Tìm kiếm đề xuất</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="form-inline">
-                    <i class="fas fa-search text-muted" style="font-size: 13px;"></i>
-                    <input class="input-material" id="searchRequestForm" type="text"
-                        placeholder="Type to quicly search...">
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Tìm kiếm đề xuất</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-inline">
+                        <i class="fas fa-search text-muted" style="font-size: 13px;"></i>
+                        <input class="input-material" id="searchRequestForm" type="text"
+                            placeholder="Type to quicly search...">
+                    </div>
+
+                    <br>
+                    <ul class="list-group list-group-flush" id="listRequestForm">
+                        <li class="list-group-item">
+                            <a href="./form.html">First item</a>
+                        </li>
+                        <li class="list-group-item">Second item</li>
+                        <li class="list-group-item">Third item</li>
+                        <li class="list-group-item">Fourth</li>
+                    </ul>
                 </div>
 
-                <br>
-                <ul class="list-group list-group-flush" id="listRequestForm">
-                    <li class="list-group-item">
-                        <a href="./form.html">First item</a>
-                    </li>
-                    <li class="list-group-item">Second item</li>
-                    <li class="list-group-item">Third item</li>
-                    <li class="list-group-item">Fourth</li>
-                </ul>
             </div>
-
         </div>
     </div>
-</div>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
@@ -546,6 +606,7 @@
     <script type='text/javascript' src="js/mention.js"></script>
     <script src="js/form.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/lang.js"></script>
 </body>
 
 </html>

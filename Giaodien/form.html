@@ -29,7 +29,7 @@
                         <a href="./index.html" style="text-decoration: none;" class="text-dark">
 
                             <i class="fas fa-angle-left font-title text-muted d-inline"></i>
-                            <h5 class="rext-dark d-inline">TẠO ĐỀ XUẤT MỚI</h5>
+                            <h5 class="rext-dark d-inline lang text-uppercase" key="create-request">TẠO ĐỀ XUẤT MỚI</h5>
                         </a>
 
                     </div>
@@ -37,7 +37,7 @@
                     <form action="">
                         <div class="row">
                             <div class="col-3">
-                                <label class="font-weight-bold">Issus date (Ngày phát hành) *</label>
+                                <label class="font-weight-bold lang" key="issus-date">Issus date</label>
                             </div>
                             <div class="col-9">
                                 <input type="date" class="form-control">
@@ -46,7 +46,7 @@
                         <br>
                         <div class="row">
                             <div class="col-3">
-                                <label class="font-weight-bold">Dept (Bộ phận) *</label>
+                                <label class="font-weight-bold lang" key="dept">Dept</label>
                             </div>
                             <div class="col-9">
                                 <select class="form-control" aria-label="Default select example">
@@ -60,7 +60,7 @@
                         <br>
                         <div class="row">
                             <div class="col-3">
-                                <label class="font-weight-bold">Name (Họ tên) *</label>
+                                <label class="font-weight-bold lang" key="name">Name</label>
                             </div>
                             <div class="col-9">
                                 <input type="text" class="form-control">
@@ -69,7 +69,7 @@
                         <br>
                         <div class="row">
                             <div class="col-3">
-                                <label class="font-weight-bold">Loại Supply *</label>
+                                <label class="font-weight-bold lang" key="type-supply">Loại Supply *</label>
                             </div>
                             <div class="col-9">
                                 <div class="row">
@@ -165,48 +165,27 @@
                             </div>
                         </div>
                         <hr>
-                        <h4>THÔNG TIN SẢN PHẨM</h4>
+                        <h4 class="text-uppercase lang" key="req-info">THÔNG TIN SẢN PHẨM</h4>
 
                         <div class="table-responsive">
                             <table class="table table-bordered mt-3">
                                 <thead>
-                                    <th>No</th>
-                                    <th>Code No</th>
-                                    <th width="300px">Item name</th>
-                                    <th width="300px">Description</th>
-                                    <th>Vendor</th>
-                                    <th>Unit_Price</th>
-                                    <th>Qty</th>
-                                    <th>Unit<span class="font-italic">(kg*pcs)</span></th>
-                                    <th width="100px">Amount<span class="font-italic">(USD or VND)</span></th>
-                                    <th width="50px">Owner of Item</th>
-                                    <th width="50px">Cost Center</th>
-                                    <th></th>
-                                    <th>Account code</th>
-                                    <th>Asset No.</th>
-                                    <th></th>
-                                </thead>
-                                <thead>
-                                    <th class="font-weight-normal">STT</th>
-                                    <th class="font-weight-normal">Mã số</th>
-                                    <th class="font-weight-normal">Tiền hàng</th>
-                                    <th class="font-weight-normal">Quy cách</th>
-                                    <th class="font-weight-normal">Nhà cung cấp</th>
-                                    <th class="font-weight-normal">Đơn giá</th>
-                                    <th class="font-weight-normal">Số lượng</th>
-                                    <th class="font-weight-normal">Đơn vị</th>
-                                    <th class="font-weight-normal">Số tiền</th>
-                                    <th class="font-weight-normal">U→UMC
-                                        C→Customer</th>
-                                    <th class="font-weight-normal">AI/SMT/FAT/
-                                        Other/Office</th>
-
-                                    <th class="font-weight-normal">（A)→Asset
-                                        （K)→Expense</th>
-                                    <th class="font-weight-normal">Tài khoản</th>
-                                    <th class="font-weight-normal">Số tài khoản</th>
+                                    <th class="lang" key="table-no">No</th>
+                                    <th class="lang" key="table-code">Code No</th>
+                                    <th class="lang" key="table-item-name" width="300px">Item name</th>
+                                    <th class="lang" key="table-desc" width="300px">Description</th>
+                                    <th class="lang" key="table-vendor">Vendor</th>
+                                    <th class="lang" key="table-unit-price">Unit_Price</th>
+                                    <th class="lang" key="table-qty">Qty</th>
+                                    <th class="lang" key="table-unit">Unit</th>
+                                    <th class="lang" key="table-amount" width="100px">Amount<span class="font-italic">(USD or VND)</span></th>
+                                    <th class="lang" key="table-owner-of-item" width="50px">Owner of Item</th>
+                                    <th class="lang" key="table-cost-center" width="50px">Cost Center</th>
+                                    <th class="lang" key="table-amount">Account code</th>
+                                    <th class="lang" key="table-account-no">Asset No.</th>
                                     <th></th>
                                 </thead>
+                                
                                 <tbody id="tableInfo">
                                     <tr class="row-info">
                                         <td>1</td>
@@ -376,7 +355,7 @@
 
                                     <tr class="summary">
                                         <td colspan="6"><textarea class="form-input" cols="30" rows="2"></textarea></td>
-                                        <td colspan="2">TOTAL</td>
+                                        <td colspan="2" class="lang text-uppercase" key="table-total">TOTAL</td>
                                         <td class="font-weight-bold total">0</td>
                                         <td class="font-weight-bold" colspan="2">（USD or VND）</td>
                                         <td colspan="3"></td>
@@ -387,13 +366,13 @@
                             <div></div>
                         </div>
                         <div class="row mt-2">
-                            <div class="col-3">
+                            <div class="col-3 lang" key="req-delivery-date">
                                 Request Delivery Date ( Ngày yêu cầu giao hàng) :
                             </div>
                             <div class="col-9"><input type="date" class="form-control"></div>
                         </div>
                         <div class="row mt-2">
-                            <div class="col-3">
+                            <div class="col-3 lang" key="note">
                                 Remark (Ghi chú):
                             </div>
                             <div class="col-9">
@@ -401,36 +380,36 @@
                             </div>
                         </div>
                         <div class="row mt-2">
-                            <div class="col-3">Round robin</div>
+                            <div class="col-3 lang" key="round-robin">Round robin</div>
                             <div class="col-2">
                                 <input type="radio" name="robin" value="y">
-                                <label for="y" class="ml-2">Yes</label>
+                                <label for="y" class="ml-2 lang" key="yes">Yes</label>
                                 <input type="radio" name="robin" value="n" class="ml-4" checked>
-                                <label for="n" class="ml-2">No</label>
+                                <label for="n" class="ml-1 lang" key="no">No</label>
                             </div>
                             <div class="col-7">
                                 <input type="file" id="robinAttach" class="ml-4">
                             </div>
                         </div>
                         <div class="row mt-2">
-                            <div class="col-3">Request expenses to Customer ?客先費用請求あり？　なし？ </div>
+                            <div class="col-3 lang" key="req-expenses-cus">Request expenses to Customer ?客先費用請求あり？　なし？ </div>
                             <div class="col-9">
                                 <div class="form-inline">
                                     <input type="radio" name="request-expenses" value="y">
-                                    <label for="y" class="ml-2">Yes</label>
+                                    <label for="y" class="ml-2 lang" key="yes">Yes</label>
                                     <input type="radio" name="request-expenses" value="n" class="ml-4" checked>
-                                    <label for="n" class="ml-2">No</label>
+                                    <label for="n" class="ml-2 lang" key="no">No</label>
                                 </div>
                             </div>
                         </div>
                         <div class="row mt-2">
-                            <div class="col-3">Có yêu cầu khách hàng thanh toán :</div>
+                            <div class="col-3 lang" key="req-checkout" >Có yêu cầu khách hàng thanh toán :</div>
                             <div class="col-2">
                                 <div class="form-inline">
                                     <input type="radio" name="customer-checkout" value="y">
-                                    <label for="y" class="ml-2">Yes</label>
+                                    <label for="y" class="ml-2 lang" key="yes">Yes</label>
                                     <input type="radio" name="customer-checkout" value="n" class="ml-4" checked>
-                                    <label for="n" class="ml-2">No</label>
+                                    <label for="n" class="ml-2 lang" key="no">No</label>
 
                                 </div>
                             </div>
@@ -444,7 +423,7 @@
                             <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"
                                 style="display:block;position:static;margin-bottom:5px;">
                                 <li><a tabindex="-1" href="javascript:void(0)" style="text-decoration:none;"
-                                        class="text-muted ml-2"><i class="fas fa-plus"></i> Thêm dòng</a>
+                                        class="text-muted ml-2"><i class="fas fa-plus"></i> <span class="lang" key="add-row"></span></a>
                                 </li>
 
                             </ul>
@@ -454,9 +433,9 @@
 
                 <div class="row form-inline m-5">
                     <div class="col-5"></div>
-                    <button type="button" class="btn btn-light col-3" width="100px">Hủy</button>
+                    <button type="button" class="btn btn-light col-3 lang" key="cancel" width="100px">Hủy</button>
                     <div class="col-1"></div>
-                    <button class="btn btn-success col-3">Tạo đề xuất</button>
+                    <button class="btn btn-success col-3 lang" key="create">Tạo đề xuất</button>
                 </div>
                 <br>
                 </form>
@@ -481,6 +460,7 @@
     <script type='text/javascript' src="js/bootstrap-typeahead.js"></script>
     <script type='text/javascript' src="js/mention.js"></script>
     <script src="js/form.js"></script>
+    <script src="js/lang.js"></script>
 
 </body>
 
