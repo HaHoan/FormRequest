@@ -206,12 +206,12 @@
                             </div>
                             <div class="row mt-4">
                                 <div class="col-10">
-                                    <p class=" font-weight-bold text-uppercase lang" key="req-info">THÔNG TIN ĐỀ XUẤT</p>
+                                    <p class=" font-weight-bold text-uppercase lang" key="req-info">THÔNG TIN ĐỀ XUẤT
+                                    </p>
                                 </div>
                                 <div class="col-2">
                                     <span class="text-right text-uppercase lang" key="code">MÃ ĐỀ XUẤT:</span>
-                                    <span
-                                    class="text-primary font-weight-bold text-right">12345</span>
+                                    <span class="text-primary font-weight-bold text-right">12345</span>
                                 </div>
                             </div>
                             <hr class="mt-1">
@@ -270,7 +270,7 @@
 
                             <div class="table-responsive mt-4">
                                 <table class="table table-bordered ">
-                                 
+
                                     <thead>
                                         <th class="font-weight-normal lang" key="table-no">STT</th>
                                         <th class="font-weight-normal lang" key="table-code">Mã số</th>
@@ -281,16 +281,20 @@
                                         <th class="font-weight-normal lang" key="table-qty">Số lượng</th>
                                         <th class="font-weight-normal lang" key="table-unit">Đơn vị</th>
                                         <th class="font-weight-normal lang" key="table-amount">Số tiền</th>
-                                        <th class="font-weight-normal lang" key="table-owner-of-item">U→UMC
+                                        <th class="font-weight-normal lang" key="table-owner-of-item" width="50px">U→UMC
                                             C→Customer</th>
-                                        <th class="font-weight-normal lang" key="table-cost-center">AI/SMT/FAT/
+                                        <th class="font-weight-normal lang" key="table-cost-center" width="50px">
+                                            AI/SMT/FAT/
                                             Other/Office</th>
+                                        <th class="font-weight-normal" width="50px">（A)→Asset
+                                            （K)→Expense</th>
                                         <th class="font-weight-normal lang" key="table-account">Tài khoản</th>
                                         <th class="font-weight-normal lang" key="table-account-no">Số tài khoản</th>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
+                                            <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
@@ -318,9 +322,11 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
+                                            <td></td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
+                                            <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
@@ -348,9 +354,11 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
+                                            <td></td>
                                         </tr>
                                         <tr>
                                             <td>5</td>
+                                            <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
@@ -378,13 +386,15 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
+                                            <td></td>
                                         </tr>
                                         <tr>
                                             <td colspan="6"></td>
-                                            <td colspan="2" class="lang"key="table-total text-uppercase">TOTAL
+                                            <td colspan="2" class="lang" key="table-total text-uppercase">TOTAL
                                             </td>
                                             <td class="font-weight-bold">0</td>
                                             <td colspan="2" class="font-weight-bold">（USD or VND）</td>
+                                            <td></td>
                                             <td></td>
                                             <td></td>
 
@@ -416,7 +426,8 @@
                                 </div>
                             </div>
                             <div>
-                                <p class="lang" key="req-expenses-cus">- Request expenses to Customer ? YES / NO) 　　客先費用請求あり？　なし？</p>
+                                <p class="lang" key="req-expenses-cus">- Request expenses to Customer ? YES / NO)
+                                    　　客先費用請求あり？　なし？</p>
                                 <p class="ml-2">Có yêu cầu khách hàng thanh toán : Có / Không </p>
                             </div>
                             <div>
@@ -435,7 +446,7 @@
                             <div class="table-responsive">
                                 <table class="table table-bordered ">
                                     <tbody>
-                                       
+
                                         <tr>
                                             <td class="font-italic lang" key="apply">Người đề xuất </td>
                                             <td class="font-italic lang" key="dept-manager">Trưởng phòng</td>
@@ -444,7 +455,8 @@
                                             <td class="font-italic lang" key="general-manager">Tổng giám đốc</td>
                                             <td class="font-italic lang" key="purchasing-dept">Người duyệt</td>
                                             <td class="font-italic lang" key="applicant">Applicant</td>
-                                            <td class="font-italic lang" key="asset-center-recive-check">Asset Center</td>
+                                            <td class="font-italic lang" key="asset-center-recive-check">Asset Center
+                                            </td>
                                         </tr>
                                         <tr height="100px">
                                             <td>
@@ -542,7 +554,8 @@
                                 <p id="txbViewComment"></p>
                             </div>
                             <button class="btn btn-success lang" key="send" id="btnAddComment">Gửi</button>
-                            <p class="mt-4 text-muted"><span id="totalComment">0</span> <span  class="lang text-uppercase" key="comment">Thảo luận</span></p>
+                            <p class="mt-4 text-muted"><span id="totalComment">0</span> <span
+                                    class="lang text-uppercase" key="comment">Thảo luận</span></p>
                             <hr>
                             <ul class="list-group list-group-flush list-comment">
 

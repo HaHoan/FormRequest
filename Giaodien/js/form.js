@@ -56,7 +56,7 @@ $(function () {
             type: 'radio',
             name: "owner" + index,
             val: "u",
-            checked:true
+            checked: true
         });
         var label3 = $("<label/>", {
             for: "u",
@@ -68,7 +68,7 @@ $(function () {
             type: 'radio',
             name: "owner" + index,
             val: "c",
-            
+
         });
         var label3 = $("<label/>", {
             for: "c",
@@ -89,7 +89,7 @@ $(function () {
             type: 'radio',
             name: "assets" + index,
             val: "a",
-            checked:true
+            checked: true
         });
         var label4 = $("<label/>", {
             for: "a",
@@ -132,9 +132,9 @@ $(function () {
         var td1 = $('<td/>', {
             colspan: "6"
         });
-        var area = $('<textarea/>',{
-            class:"form-input",
-            row:2
+        var area = $('<textarea/>', {
+            class: "form-input",
+            row: 2
         })
         td1.append(area)
         var td2 = $('<td/>', {
@@ -195,8 +195,17 @@ $(function () {
     $('.form-input').on('change', function () {
         $('.total').text(getTotalAmount())
     });
-
-
+    $('.form-input').keypress(function (e) {
+        if (e.which == 13) {
+            $('.total').text(getTotalAmount())
+        }
+    });
+    $('form input').keydown(function (e) {
+        if (e.keyCode == 13) {
+            e.preventDefault();
+           
+        }
+    });
     $('.request-item').click(function (e) {
         var item = $(this).prop('name');
         console.log(item);
