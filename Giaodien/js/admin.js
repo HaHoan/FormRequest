@@ -1,5 +1,89 @@
 $(function () {
     var users = [];
+    var listStep = [{
+        index: 0,
+        key: 'step-1',
+        name: 'Dept Manager'
+    
+    },
+    {
+        index: 1,
+        key: 'step-2',
+        name: 'Assets',
+        return: {
+            "name": "Back to",
+            "items": {
+                "step-1": { "name": "Dept Manager" },
+                "step-2": { "name": "Assets" },
+                "step-3": { "name": "Factory Manager" }
+            }
+        }
+    },
+    {
+        index: 2,
+        key: 'step-3',
+        name: 'Factory Manager',
+        return: {
+            "name": "Back to",
+            "items": {
+                "step-1": { "name": "Dept Manager" },
+                "step-2": { "name": "Assets" }
+            }
+        }
+    },
+
+    {
+        index: 3,
+        key: 'step-4',
+        name: 'General Director',
+        return: {
+            "name": "Back to",
+            "items": {
+                "step-1": { "name": "Dept Manager" },
+                "step-2": { "name": "Assets" }
+            }
+        }
+    },
+
+    {
+        index: 4,
+        key: 'step-5',
+        name: 'Purchasing Dept',
+        return: {
+            "name": "Back to",
+            "items": {
+                "step-1": { "name": "Dept Manager" },
+                "step-2": { "name": "Assets" }
+            }
+        }
+    },
+
+    {
+        index: 5,
+        key: 'step-6',
+        name: 'Applicant',
+        return: {
+            "name": "Back to",
+            "items": {
+                "step-1": { "name": "Dept Manager" },
+                "step-2": { "name": "Assets" }
+            }
+        }
+    },
+
+    {
+        index: 6,
+        key: 'step-7',
+        name: 'Asset Center',
+        return: {
+            "name": "Back to",
+            "items": {
+                "step-1": { "name": "Dept Manager" },
+                "step-2": { "name": "Assets" }
+            }
+        }
+    }
+    ];
     var current_step = 0;
     $("#searchUser").on("keydown", function (e) {
         if (e.which == 13) {
@@ -70,4 +154,26 @@ $(function () {
             }
         }
     });
+    $.each(listStep, function (index,value) {
+        if(value.return != null){
+            $.contextMenu({
+                selector: '.context-menu-' + (index + 1),
+                callback: function (key, options) {
+                    var step = listStep.find(x => x.key === key);
+                    alert(step.name);
+                },
+                items: {
+    
+                    "Return":value.return 
+                }
+            });
+        }
+       
+    })
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.moveTo(0,0);
+    ctx.lineTo(200,100);
+    ctx.stroke();
+
 });

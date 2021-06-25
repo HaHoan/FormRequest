@@ -89,7 +89,8 @@ var arrLang = {
         "name":"Name",
         "add-row":"Add row",
         "cancel":"Cancel",
-        "create":"Create"
+        "create":"Create",
+        "return":"Back to"
     },
     "vi": {
         "Home": "Trang chủ",
@@ -153,7 +154,8 @@ var arrLang = {
         "name":"Họ tên",
         "add-row":"Thêm dòng",
         "cancel":"Hủy",
-        "create":"Đề xuất"
+        "create":"Đề xuất",
+        "return":"Quay lại bước"
     },
     "ja": {
 

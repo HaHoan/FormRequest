@@ -10,52 +10,46 @@
         crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.css">
+   
     <title>Document</title>
 </head>
 
 <body>
-
-    <button class="translate" id="en-gb">English</button>
-    <button class="translate" id="vn-tw">Chinese</button>
-    
-    <ul>
-        <li class="lang" key="HOME">HOME</li>
-        <li class="lang" key="ABOUT"></li>
-        <li class="lang" key="CONTACT"></li>
-    </ul>
     <div id="steps-form-detail" class="steps-form container mt-5">
         <div id="step-form" class="steps-row setup-panel">
-            <div id="step-1" class="steps-step">
+            <div id="step-1" class="steps-step context-menu-1">
                 <a class="btn btn-secondary text-white btn-circle btn-secondary" href="javascript:void(0)">1</a>
                 <pre>Dept Manager</pre>
-              
+
             </div>
-            <div id="step-2" class="steps-step">
-                <a href="javascript:void(0)" type="button" class="btn btn-secondary text-white btn-circle">2</a>
+            <div id="step-2" class="steps-step context-menu-2">
+                <a href="javascript:void(0)" class="btn btn-secondary text-white btn-circle">2</a>
                 <pre>Assets</pre>
             </div>
-            <div id="step-3" class="steps-step">
-                <a href="javascript:void(0)" type="button" class="btn btn-secondary text-white btn-circle">3</a>
+            <div id="step-3" class="steps-step context-menu-3">
+                <a href="javascript:void(0)" class="btn btn-secondary text-white btn-circle">3</a>
                 <pre>Factory Manager</pre>
             </div>
-            <div id="step-4" class="steps-step">
-                <a href="javascript:void(0)" type="button" class="btn btn-secondary text-white btn-circle">4</a>
+            <div id="step-4" class="steps-step context-menu-4">
+                <a href="javascript:void(0)" class="btn btn-secondary text-white btn-circle">4</a>
                 <pre>General Director</pre>
             </div>
-            <div id="step-5" class="steps-step">
-                <a href="javascript:void(0)" type="button" class="btn btn-secondary text-white btn-circle">5</a>
+            <div id="step-5" class="steps-step context-menu-5">
+                <a href="javascript:void(0)" class="btn btn-secondary text-white btn-circle">5</a>
                 <pre>Purchasing Dept</pre>
             </div>
-            <div id="step-6" class="steps-step">
-                <a href="javascript:void(0)" type="button" class="btn btn-secondary text-white btn-circle">6</a>
+            <div id="step-6" class="steps-step context-menu-6">
+                <a href="javascript:void(0)" class="btn btn-secondary text-white btn-circle">6</a>
                 <pre>Applicant</pre>
             </div>
-            <div id="step-7" class="steps-step">
-                <a href="javascript:void(0)" type="button" class="btn btn-secondary text-white btn-circle">7</a>
+            <div id="step-7" class="steps-step context-menu-7">
+                <a href="javascript:void(0)" class="btn btn-secondary text-white btn-circle">7</a>
                 <pre>Asset Center</pre>
             </div>
         </div>
-      
+
     </div>
 
     <div id="submitors" class="container">
@@ -92,9 +86,13 @@
 
         </ul>
     </div>
+  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
+
     <script src="js/admin.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/lang.js"></script>
 </body>
 
 </html>
