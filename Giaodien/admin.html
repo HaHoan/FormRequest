@@ -17,46 +17,58 @@
 </head>
 
 <body>
-    
-    <div class="step-follow mt-5">
-        <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" class="container steps-form">
+
+    <div class=" container mt-5">
+        <label for="type_form" class="lang" key="type_form">Choose a car:</label>
+
+        <select id="type_form" class="form-control" style="width:50%">
+            <option label="Volvo">Volvo (Latin for "I roll")</option>
+            <option label="Saab">Saab (Swedish Aeroplane AB)</option>
+            <option label="Mercedes">Mercedes (Mercedes-Benz)</option>
+            <option label="Audi">Audi (Auto Union Deutschland Ingolstadt)</option>
+        </select>
+        <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" class=" steps-form">
         </svg>
-      
-    </div>
-    <div id="submitors" class="container">
-        <input class="form-control" id="searchUser" type="text" placeholder="Tìm kiếm">
-        <br>
-        <ul class="list-group" id="listUser">
+        <div id="submitors" class="container">
+            <input class="form-control" id="searchUser" style="width:40%" type="text" placeholder="Tìm kiếm">
+            <br>
+            <ul class="list-group" style="width:50%" id="listUser">
 
-            <li class="list-group-item form-check-inline">
-                <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" name="34811" value="Hà Thị Hoàn">Hà Thị Hoàn
-                </label>
-            </li>
-            <li class="list-group-item form-check-inline">
-                <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" name="34812" value="Phạm Văn Quyết">Phạm Văn Quyết
-                </label>
-            </li>
-            <li class="list-group-item form-check-inline">
-                <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" name="34813" value="Nguyễn Thị Trang">Nguyễn Thị
-                    Trang
-                </label>
-            </li>
-            <li class="list-group-item form-check-inline">
-                <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" name="34814" value="Ngô Thị The">Ngô Thị The
-                </label>
-            </li>
-            <li class="list-group-item form-check-inline">
-                <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" name="34815" value="Phạm Thị Hằng">Phạm Thị Hằng
-                </label>
-            </li>
+                <li class="list-group-item form-check-inline">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="34811" value="Hà Thị Hoàn">Hà Thị Hoàn
+                    </label>
+                </li>
+                <li class="list-group-item form-check-inline">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="34812" value="Phạm Văn Quyết">Phạm Văn
+                        Quyết
+                    </label>
+                </li>
+                <li class="list-group-item form-check-inline">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="34813" value="Nguyễn Thị Trang">Nguyễn Thị
+                        Trang
+                    </label>
+                </li>
+                <li class="list-group-item form-check-inline">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="34814" value="Ngô Thị The">Ngô Thị The
+                    </label>
+                </li>
+                <li class="list-group-item form-check-inline">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="34815" value="Phạm Thị Hằng">Phạm Thị Hằng
+                    </label>
+                </li>
 
-        </ul>
+            </ul>
+        </div>
+
+
+        <button class="btn btn-success mt-5 ml-2 lang" key="save_change">Lưu thay đổi</button>
     </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>

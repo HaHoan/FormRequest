@@ -158,7 +158,7 @@ $(function () {
             }
         }
     });
-    var startX = 50;
+    var startX = 30;
     var startY = 100;
     var pi = 15;
 

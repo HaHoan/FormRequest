@@ -90,7 +90,9 @@ var arrLang = {
         "add-row":"Add row",
         "cancel":"Cancel",
         "create":"Create",
-        "return":"Back to"
+        "return":"Back to",
+        "type_form":"Choose type form",
+        "save_change":"Save changes"
     },
     "vi": {
         "Home": "Trang chủ",
@@ -155,7 +157,9 @@ var arrLang = {
         "add-row":"Thêm dòng",
         "cancel":"Hủy",
         "create":"Đề xuất",
-        "return":"Quay lại bước"
+        "return":"Quay lại bước",
+        "type_form":"Chọn mẫu form",
+        "save_change":"Lưu thay đổi"
     },
     "ja": {
 
