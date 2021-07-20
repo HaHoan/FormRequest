@@ -1,103 +1,124 @@
 $(function () {
     var users = [];
-    var listStep = [{
-        index: 0,
-        key: 'step-1',
-        name: 'Dept Manager',
-        return: {
+    var listStep = [
 
-        }
-
-    },
-    {
-        index: 1,
-        key: 'step-2',
-        name: 'Assets',
-        return: {
-            "name": "Back to",
-            "items": {
-                "step-1": { "name": "Dept Manager" }
-
-            }
-        }
-    },
-    {
-        index: 2,
-        key: 'step-3',
-        name: 'Factory Manager',
-        return: {
-            "name": "Back to",
-            "items": {
-                "step-1": { "name": "Dept Manager" },
-                "step-2": { "name": "Assets" }
-            }
-        }
-    },
-
-    {
-        index: 3,
-        key: 'step-4',
-        name: 'General Director',
-        return: {
-            "name": "Back to",
-            "items": {
-                "step-1": { "name": "Dept Manager" },
-                "step-2": { "name": "Assets" },
-                "step-3": { "name": "Factory Manager" }
-            }
-        }
-    },
-
-    {
-        index: 4,
-        key: 'step-5',
-        name: 'Purchasing Dept',
-        return: {
-            "name": "Back to",
-            "items": {
-                "step-1": { "name": "Dept Manager" },
-                "step-2": { "name": "Assets" },
-                "step-3": { "name": "Factory Manager" },
-                "step-4": { "name": "General Director" }
-
-            }
-        }
-    },
-
-    {
-        index: 5,
-        key: 'step-6',
-        name: 'Applicant',
-        return: {
-            "name": "Back to",
-            "items": {
-                "step-1": { "name": "Dept Manager" },
-                "step-2": { "name": "Assets" },
-                "step-3": { "name": "Factory Manager" },
-                "step-4": { "name": "General Director" },
-                "step-5": { "name": "Purchasing Dept" }
+        {
+            index: 0,
+            key: 'step-1',
+            name: 'Applicant',
+            return: {
 
             }
 
-        }
-    },
+        },
+        {
+            index: 1,
+            key: 'step-2',
+            name: 'Dept Manager',
+            return: {
+                "name": "Back to",
+                "items": {
+                    "step-1": { "name": "Applicant" }
 
-    {
-        index: 6,
-        key: 'step-7',
-        name: 'Asset Center',
-        return: {
-            "name": "Back to",
-            "items": {
-                "step-1": { "name": "Dept Manager" },
-                "step-2": { "name": "Assets" },
-                "step-3": { "name": "Factory Manager" },
-                "step-4": { "name": "General Director" },
-                "step-5": { "name": "Purchasing Dept" },
-                "step-6": { "name": "Applicant" }
+                }
+            }
+
+        },
+        {
+            index: 2,
+            key: 'step-3',
+            name: 'Assets',
+            return: {
+                "name": "Back to",
+                "items": {
+                    "step-1": { "name": "Applicant" },
+                    "step-2": { "name": "Dept Manager" }
+
+                }
+            }
+        },
+        {
+            index: 3,
+            key: 'step-4',
+            name: 'Factory Manager',
+            return: {
+                "name": "Back to",
+                "items": {
+                    "step-1": { "name": "Applicant" },
+                    "step-2": { "name": "Dept Manager" },
+                    "step-3": { "name": "Assets" }
+                }
+            }
+        },
+
+        {
+            index: 4,
+            key: 'step-5',
+            name: 'General Director',
+            return: {
+                "name": "Back to",
+                "items": {
+                    "step-1": { "name": "Applicant" },
+                    "step-2": { "name": "Dept Manager" },
+                    "step-3": { "name": "Assets" },
+                    "step-4": { "name": "Factory Manager" }
+                }
+            }
+        },
+
+        {
+            index: 5,
+            key: 'step-6',
+            name: 'Purchasing Dept',
+            return: {
+                "name": "Back to",
+                "items": {
+                    "step-1": { "name": "Applicant" },
+                    "step-2": { "name": "Dept Manager" },
+                    "step-3": { "name": "Assets" },
+                    "step-4": { "name": "Factory Manager" },
+                    "step-5": { "name": "General Director" }
+
+                }
+            }
+        },
+
+        {
+            index: 6,
+            key: 'step-7',
+            name: 'Applicant',
+            return: {
+                "name": "Back to",
+                "items": {
+                    "step-1": { "name": "Applicant" },
+                    "step-2": { "name": "Dept Manager" },
+                    "step-3": { "name": "Assets" },
+                    "step-4": { "name": "Factory Manager" },
+                    "step-5": { "name": "General Director" },
+                    "step-6": { "name": "Purchasing Dept" }
+
+                }
+
+            }
+        },
+
+        {
+            index: 7,
+            key: 'step-8',
+            name: 'Asset Center',
+            return: {
+                "name": "Back to",
+                "items": {
+                    "step-1": { "name": "Applicant" },
+                    "step-2": { "name": "Dept Manager" },
+                    "step-3": { "name": "Assets" },
+                    "step-4": { "name": "Factory Manager" },
+                    "step-5": { "name": "General Director" },
+                    "step-6": { "name": "Purchasing Dept" },
+                    "step-7": { "name": "Applicant" }
+                }
             }
         }
-    }
     ];
     var current_step = 0;
     $("#searchUser").on("keydown", function (e) {
@@ -224,8 +245,8 @@ $(function () {
 });
 function drawReturnLine(currentStation, returnStation) {
     var pi = 15;
-    var startX = 50 + 115 * currentStation;
-    var returnX = 50 + 115 * returnStation;
+    var startX = 30 + 115 * currentStation;
+    var returnX = 30 + 115 * returnStation;
     var startY = 100;
     var initY = 1 + returnStation * 10;
     var color = '#111';
