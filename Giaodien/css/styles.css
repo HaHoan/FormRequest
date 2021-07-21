@@ -52,7 +52,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -6109,6 +6109,9 @@ a.close.disabled {
 .bg-primary {
   background-color: #007bff !important;
 }
+.bg-primary-light {
+  background-color: #81d4fa !important;
+}
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
@@ -9878,7 +9881,7 @@ a.text-light:hover, a.text-light:focus {
 }
 
 .text-dark {
-  color: #343a40 !important;
+  color: #111 !important;
 }
 
 a.text-dark:hover, a.text-dark:focus {
@@ -10215,17 +10218,17 @@ body {
 }
 
 .sb-sidenav-dark {
-  background-color: #212529;
-  color: rgba(255, 255, 255, 0.5);
+  background-color: #81d4fa;
+  color: #111
 }
 .sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
-  color: rgba(255, 255, 255, 0.25);
+  color: #111;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+  color:#111
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
-  color: rgba(255, 255, 255, 0.25);
+  color: #111
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-sidenav-collapse-arrow {
   color: rgba(255, 255, 255, 0.25);
@@ -10237,7 +10240,7 @@ body {
   color: #fff;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
-  color: #fff;
+  color: #111;
 }
 .sb-sidenav-dark .sb-sidenav-footer {
   background-color: #343a40;

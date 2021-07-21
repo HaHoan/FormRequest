@@ -16,7 +16,11 @@
         crossorigin="anonymous"></script>
 
 </head>
-
+<style>
+     .type_number {
+        text-align: right;
+      }
+</style>
 <body class="sb-nav-fixed container-fluid">
 
     <!--Form nhập request-->
@@ -195,7 +199,10 @@
                                         <td><input class="form-input"></input></td>
                                         <td><input class="form-input"></input></td>
                                         <td><input class="form-input"></input></td>
-                                        <td><input class="form-input"></input></td>
+                                        <td>
+                                            <input class="form-input type_number" id="Unit_price_view_1" type="text" pattern="[0-9,,]" required></input>
+                                            <input type="hidden" id="Unit_price_1"></input>
+                                        </td>
                                         <td><input class="form-input"></input></td>
                                         <td><input class="form-input"></input></td>
                                         <td><input class="form-input"></input></td>

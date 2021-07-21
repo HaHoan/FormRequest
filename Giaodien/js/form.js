@@ -352,4 +352,40 @@ $(function () {
         users: users
     });
 
+    $("#Unit_price_view_1").keyup(function (e) {
+        var unit = convertCommas($(this).val());
+        $('#Unit_price_1').val(unit)
+        var textCommas = addCommas(unit)
+        $(this).val(textCommas)
+    })
+
+    $(".type_number").keypress(function (e) {
+        return onlyNumber(e)
+      });
 })
+function onlyNumber(e){
+    if (/\d+|,+|[/b]+|-+/i.test(e.key) ){
+        return true
+      } else {
+        return false;
+    }
+}
+function addCommas(nStr)
+{
+	nStr += '';
+	x = nStr.split('.');
+	x1 = x[0];
+	x2 = x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while (rgx.test(x1)) {
+		x1 = x1.replace(rgx, '$1' + ',' + '$2');
+	}
+	return x1 + x2;
+}
+function convertCommas(nStr){
+    return replaceAll(nStr,',','')
+}
+function replaceAll(str, find, replace) {
+    var escapedFind=find.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+    return str.replace(new RegExp(escapedFind, 'g'), replace);
+}

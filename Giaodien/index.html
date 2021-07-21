@@ -16,15 +16,20 @@
         crossorigin="anonymous"></script>
 
 </head>
-
+<style>
+    .title{
+        font-size: 25px;
+    }
+</style>
 <body class="sb-nav-fixed container-fluid">
     <header>
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary-light">
+            <a class="navbar-brand text-dark " href="index.html">
                 <i class="fas fa-home"></i>
-                <span class="lang" key="Home">Trang chủ</span>
+                <span class="lang " key="Home">Trang chủ</span>
             </a>
-            <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#!"><i
+            <div class="">
+                <button class="btn btn-link text-dark btn-sm order-1 order-lg-0 " id="sidebarToggle" href="#!"><i
                     class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline mr-auto ml-0 ml-md-3 my-2 my-md-0">
@@ -36,13 +41,19 @@
                     </div>
                 </div>
             </form>
+            </div>
+         
+            <div class="d-none d-md-inline-block ml-auto mr-auto">
+                <img src="./assets/img/logo.png">
+                <span class="lang font-weight-bold title align-middle ml-3" key="title">UMC Form request</span>
+            </div>
             <!-- Navbar-->
-            <ul class="navbar-nav ml-auto ml-md-0">
+            <ul class="navbar-nav ml-auto ml-md-0 ">
 
                 <div class="nav-item dropdown">
-                    <button class="btn btn-secondary  dropdown-toggle" type="button" id="userDropdown"
+                    <button class="btn btn-light  dropdown-toggle" type="button" id="userDropdown"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-user fa-fw"></i> <span class="lang" key="Username">Tên đăng nhập</span>
+                        <i class="fas fa-user fa-fw"></i> <span class="lang " key="Username">Tên đăng nhập</span>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                         <a class="dropdown-item" href="#!">Settings</a>
@@ -51,9 +62,9 @@
                         <a class="dropdown-item" href="login.html">Logout</a>
                     </div>
                 </div>
-
+           
                 <div class="nav-item dropdown ml-2">
-                    <button class="btn btn-secondary  dropdown-toggle" type="button" id="userDropdown"
+                    <button class="btn btn-light  dropdown-toggle" type="button" id="userDropdown"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img src="./assets/img/vietnam.png" alt="" class="mr-1 icon-lang"><span class="text-lang">Tiếng Việt</span>
                     </button>
@@ -84,13 +95,13 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
 
-                        <a class="nav-link mt-4" href="./summary.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            <span class="lang" key="Summary">Tổng kết</span>
+                        <a class="nav-link text-dark mt-4"  href="./summary.html">
+                            <div class="sb-nav-link-icon text-dark"><i class="fas fa-tachometer-alt"></i></div>
+                            <label class=" lang" key="Summary">Tổng kết</label>
                         </a>
-                        <button class="btn btn-secondary ml-3 mr-5 mt-3" data-toggle="modal"
+                        <button class="btn btn-light ml-3 mr-5 mt-3" data-toggle="modal"
                             data-target="#findRequestForm">
-                            <i class="fas fa-plus text-white"></i>
+                            <i class="fas fa-plus text-dark"></i>
                             <span class="lang" key="create-request">Tạo đề xuất mới</span>
                         </button>
 
@@ -122,7 +133,7 @@
                         </div>
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                             aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open  "></i></div>
                             IT
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>

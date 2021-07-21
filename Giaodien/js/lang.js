@@ -92,7 +92,8 @@ var arrLang = {
         "create":"Create",
         "return":"Back to",
         "type_form":"Choose type form",
-        "save_change":"Save changes"
+        "save_change":"Save changes",
+        'title' : "UMC FORM REQUEST"
     },
     "vi": {
         "Home": "Trang chủ",
@@ -159,7 +160,8 @@ var arrLang = {
         "create":"Đề xuất",
         "return":"Quay lại bước",
         "type_form":"Chọn mẫu form",
-        "save_change":"Lưu thay đổi"
+        "save_change":"Lưu thay đổi",
+        'title' : "UMC FORM REQUEST"
     },
     "ja": {
 
