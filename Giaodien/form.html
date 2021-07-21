@@ -16,11 +16,7 @@
         crossorigin="anonymous"></script>
 
 </head>
-<style>
-     .type_number {
-        text-align: right;
-      }
-</style>
+
 <body class="sb-nav-fixed container-fluid">
 
     <!--Form nhập request-->
@@ -182,16 +178,17 @@
                                     <th class="lang" key="table-unit-price">Unit_Price</th>
                                     <th class="lang" key="table-qty">Qty</th>
                                     <th class="lang" key="table-unit">Unit</th>
-                                    <th class="lang" key="table-amount" width="100px">Amount<span class="font-italic">(USD or VND)</span></th>
+                                    <th class="lang" key="table-amount" width="100px">Amount<span
+                                            class="font-italic">(USD or VND)</span></th>
                                     <th class="lang" key="table-owner-of-item" width="50px">Owner of Item</th>
                                     <th class="lang" key="table-cost-center" width="50px">Cost Center</th>
-                                    <th width="50px">（A)→Asset 
+                                    <th width="50px">（A)→Asset
                                         （K)→Expense</th>
                                     <th class="lang" key="table-amount">Account code</th>
                                     <th class="lang" key="table-account-no">Asset No.</th>
                                     <th></th>
                                 </thead>
-                                
+
                                 <tbody id="tableInfo">
                                     <tr class="row-info">
                                         <td>1</td>
@@ -200,12 +197,15 @@
                                         <td><input class="form-input"></input></td>
                                         <td><input class="form-input"></input></td>
                                         <td>
-                                            <input class="form-input type_number" id="Unit_price_view_1" type="text" pattern="[0-9,,]" required></input>
+                                            <input class="form-input type_number" id="Unit_price_view_1" type="text"
+                                                pattern="[0-9,,]" required></input>
                                             <input type="hidden" id="Unit_price_1"></input>
                                         </td>
+                                        <td><input class="form-input" id="Qty_1"></input>
+                                        </td>
                                         <td><input class="form-input"></input></td>
-                                        <td><input class="form-input"></input></td>
-                                        <td><input class="form-input"></input></td>
+                                        <td><input class="form-input"></input>
+                                            <input type="hidden" id="Amount_1"></input></td>
 
                                         <td>
                                             <div class="form-inline">
@@ -401,7 +401,8 @@
                             </div>
                         </div>
                         <div class="row mt-2">
-                            <div class="col-3 lang" key="req-expenses-cus">Request expenses to Customer ?客先費用請求あり？　なし？ </div>
+                            <div class="col-3 lang" key="req-expenses-cus">Request expenses to Customer ?客先費用請求あり？　なし？
+                            </div>
                             <div class="col-9">
                                 <div class="form-inline">
                                     <input type="radio" name="request-expenses" value="y">
@@ -412,7 +413,7 @@
                             </div>
                         </div>
                         <div class="row mt-2">
-                            <div class="col-3 lang" key="req-checkout" >Có yêu cầu khách hàng thanh toán :</div>
+                            <div class="col-3 lang" key="req-checkout">Có yêu cầu khách hàng thanh toán :</div>
                             <div class="col-2">
                                 <div class="form-inline">
                                     <input type="radio" name="customer-checkout" value="y">
@@ -432,7 +433,8 @@
                             <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"
                                 style="display:block;position:static;margin-bottom:5px;">
                                 <li><a tabindex="-1" href="javascript:void(0)" style="text-decoration:none;"
-                                        class="text-muted ml-2"><i class="fas fa-plus"></i> <span class="lang" key="add-row"></span></a>
+                                        class="text-muted ml-2"><i class="fas fa-plus"></i> <span class="lang"
+                                            key="add-row"></span></a>
                                 </li>
 
                             </ul>

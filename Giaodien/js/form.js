@@ -179,10 +179,10 @@ $(function () {
         $(".total").text(getTotalAmount())
         updateSTT();
     }
-    function getTotalAmount() {
+    function getTotalAmountView() {
         var total = 0;
         $('#tableInfo tr').each(function (rowIndex) {
-            var amount = $('#tableInfo tr:eq(' + rowIndex + ') td:eq(8) input').val();
+            var amount = $('#tableInfo tr:eq(' + rowIndex + ') td:eq(8)').text();
             if (typeof amount !== "undefined" && amount) {
                 total += parseInt(amount);
             }
@@ -192,9 +192,38 @@ $(function () {
         else
             return total;
     }
+    function getTotalAmount() {
+        var total = 0;
+        $('#tableInfo tr').each(function (rowIndex) {
+            var amount = $('#tableInfo tr:eq(' + rowIndex + ') td:eq(8) input').val();
+            amount = convertCommas(amount)
+            if (typeof amount !== "undefined" && amount) {
+                total += parseInt(amount);
+            }
+
+        });
+        if (isNaN(total)) return "0"
+        else
+            return total;
+    }
+    function getTotalPrice(rowIndex) {
+        var total = 0;
+        var unit_price = $('#tableInfo tr:eq(' + rowIndex + ') td:eq(5) .form-input').val();
+        unit_price = convertCommas(unit_price)
+        var qty = $('#tableInfo tr:eq(' + rowIndex + ') td:eq(6) input').val();
+        if (typeof unit_price !== "undefined" && unit_price && typeof qty !== "undefined" && qty) {
+            total += parseInt(unit_price) * parseInt(qty)
+        }
+
+        if (isNaN(total)) return "0"
+        else
+            return total;
+    }
+    $('.total').text(getTotalAmountView())
     $('.form-input').on('change', function () {
         $('.total').text(getTotalAmount())
     });
+
     $('.form-input').keypress(function (e) {
         if (e.which == 13) {
             $('.total').text(getTotalAmount())
@@ -203,7 +232,7 @@ $(function () {
     $('form input').keydown(function (e) {
         if (e.keyCode == 13) {
             e.preventDefault();
-           
+
         }
     });
     $('.request-item').click(function (e) {
@@ -361,31 +390,34 @@ $(function () {
 
     $(".type_number").keypress(function (e) {
         return onlyNumber(e)
-      });
+    });
+    $('#Qty_1').change(function (e) {
+        var rowIndex = 0;
+        var amount = getTotalPrice(0);
+        $('#Amount_' + (rowIndex + 1)).val(amount);
+        $('#tableInfo tr:eq(' + rowIndex + ') td:eq(8) .form-input').val(addCommas(amount));
+        $('.total').text(getTotalAmount())
+    })
 })
-function onlyNumber(e){
-    if (/\d+|,+|[/b]+|-+/i.test(e.key) ){
+function onlyNumber(e) {
+    if (/\d+|,+|[/b]+|-+/i.test(e.key)) {
         return true
-      } else {
+    } else {
         return false;
     }
 }
-function addCommas(nStr)
-{
-	nStr += '';
-	x = nStr.split('.');
-	x1 = x[0];
-	x2 = x.length > 1 ? '.' + x[1] : '';
-	var rgx = /(\d+)(\d{3})/;
-	while (rgx.test(x1)) {
-		x1 = x1.replace(rgx, '$1' + ',' + '$2');
-	}
-	return x1 + x2;
+function addCommas(nStr) {
+    nStr += '';
+    x = nStr.split('.');
+    x1 = x[0];
+    x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    }
+    return x1 + x2;
 }
-function convertCommas(nStr){
-    return replaceAll(nStr,',','')
-}
-function replaceAll(str, find, replace) {
-    var escapedFind=find.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
-    return str.replace(new RegExp(escapedFind, 'g'), replace);
+function convertCommas(nStr) {
+    if (typeof nStr === "undefined") return ""
+    return nStr.split(',').join('')
 }
